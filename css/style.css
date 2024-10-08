@@ -151,20 +151,13 @@ body {
 .hero-text {
   z-index: 1;
 }
-
-.hero-text-p {
+.hero-text p {
   font-size: 90px;
   color: #F9F9F9;
 }
-
-.hero-span {
+.hero-text span {
   font-size: 60px;
   color: #FE9D00;
-}
-
-.taste-text {
-  margin-top: -20px;
-  color: #FFD700;
 }
 
 .taste-div {
@@ -172,20 +165,42 @@ body {
   justify-content: end;
 }
 
+.taste-div p {
+  margin-top: -15px;
+  font-size: 20px;
+  color: #FFD700;
+}
+
 .see-div {
   position: absolute;
+  left: 50%;
   bottom: 50px;
   height: 50px;
   width: 100px;
+  transform: translateX(-50%);
   background-color: tomato;
 }
 
-@media (width <= 786px) {
+@media (width <= 768px) {
   .nav {
     padding: 0 2em;
     background-color: royalblue;
   }
   .nav__items {
     display: none;
+  }
+  .hero-text p {
+    font-size: 50px;
+  }
+  .hero-text span {
+    font-size: 40px;
+  }
+  .taste-div p {
+    font-size: 20px;
+  }
+  .see-div {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }/*# sourceMappingURL=style.css.map */
