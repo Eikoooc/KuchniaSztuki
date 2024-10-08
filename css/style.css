@@ -1,9 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 *,
 *::after,
 *::before {
@@ -55,6 +49,7 @@ body {
   font-family: "ABeeZee", sans-serif;
   background-color: #030406;
   color: #FFF;
+  height: 100vh;
 }
 
 .wrapper {
@@ -98,4 +93,63 @@ body {
 }
 .nav__item:hover {
   color: #FFD700;
+}
+
+.header {
+  height: 100vh;
+}
+
+.hero-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: url("../img/header.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.hero-img::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.hero-text {
+  z-index: 1;
+}
+
+.hero-text-p {
+  font-size: 90px;
+  color: #F9F9F9;
+}
+
+.hero-span {
+  font-size: 60px;
+  color: #FE9D00;
+}
+
+.taste-text {
+  margin-top: -20px;
+  color: #FFD700;
+}
+
+.taste-div {
+  display: flex;
+  justify-content: end;
+}
+
+.see-div {
+  position: absolute;
+  bottom: 50px;
+  height: 50px;
+  width: 100px;
+  background-color: tomato;
 }/*# sourceMappingURL=style.css.map */

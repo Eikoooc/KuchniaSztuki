@@ -5,53 +5,112 @@ body {
   font-family: "ABeeZee", sans-serif;
   background-color: $main-color;
   color: $white-color;
+  height: 100vh;
 }
 
-.wrapper{
-    max-width: 1200px;
-    margin: 0 auto;
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.nav {
+  height: 10em;
+  box-shadow: 0 0 10px black;
+  background-color: red;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-size: 4rem;
+    font-family: "Kaushan Script", cursive;
+    a {
+      color: $logo-white;
+    }
+    span {
+      font-size: 2.5rem;
+      color: $logo-second;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+  }
+
+  &__item {
+    color: $white-color;
+    padding: 1em;
+    font-size: 2.5rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $header-subtitle-color;
+    }
+  }
 }
 
-.nav{
-    height: 10em;
-    box-shadow: 0 0 10px black;
-    background-color: red;
-    
-    .wrapper{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.header {
+  height: 100vh;
+}
 
-    &__logo{
-        font-size: 4rem;
-        font-family: "Kaushan Script", cursive;
-        a{
-            color: $logo-white;
-        }
-        span{
-            font-size: 2.5rem;
-            color: $logo-second;
-        }
-    }
+.hero-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: url("../img/header.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
 
-    &__items{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
+.hero-img::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
 
-    }
-    
-    &__item{
-        color: $white-color;
-        padding: 1em;
-        font-size: 2.5rem;
-        transition: color .3s;
+.hero-text {
+  z-index: 1;
+}
 
-        &:hover{
-            color: $header-subtitle-color;
-        }
-    }
+.hero-text-p {
+  font-size: 90px;
+  color: $logo-white;
+}
+
+.hero-span {
+  font-size: 60px;
+  color: $logo-second;
+}
+
+.taste-text {
+  margin-top: -20px;
+  color: $header-subtitle-color;
+}
+
+.taste-div {
+  display: flex;
+  justify-content: end;
+}
+
+.see-div {
+  position: absolute;
+  bottom: 50px;
+  height: 50px;
+  width: 100px;
+  background-color: tomato;
 }
