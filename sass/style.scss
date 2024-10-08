@@ -1,2 +1,6 @@
 @use "./colors" as *;
+@import './reset';
 
+body {
+  background-color: $main-color;
+}
