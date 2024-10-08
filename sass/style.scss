@@ -1,2 +1,10 @@
-@use "./colors" as *;
+@use './colors' as *;
+@use './reset' as *;
 
+
+
+body{
+    font-family: sans-serif ;
+    font-size: 20px;
+    background-color: #333;
+}
