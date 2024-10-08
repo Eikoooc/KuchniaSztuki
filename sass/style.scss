@@ -54,6 +54,37 @@ body {
       color: $header-subtitle-color;
     }
   }
+
+  &__burger{
+    position: relative;
+    width: 5em;
+    height: 5em;
+
+    &-bars{
+        position: relative;
+        width: 100%;
+        height: 25%;
+        background-color: rgb(255, 0, 128);
+
+        &::after, &::before{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgb(83, 10, 85);
+        }
+
+        &::before{
+            top: -150%;
+            left: 0;
+        }
+
+        &::after{
+            bottom: -150%;
+            right: 0;
+        }
+    }
+  }
 }
 
 .header {
@@ -113,4 +144,16 @@ body {
   height: 50px;
   width: 100px;
   background-color: tomato;
+}
+
+
+@media (width <= 786px){
+    .nav{
+        padding: 0 2em;
+        background-color: royalblue;
+
+        &__items{
+            display: none;
+        }
+    }
 }
