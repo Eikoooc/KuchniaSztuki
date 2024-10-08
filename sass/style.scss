@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @use './colors' as *;
 @use './reset' as *;
 
@@ -8,3 +9,11 @@ body{
     font-size: 20px;
     background-color: #333;
 }
+=======
+@use "./colors" as *;
+@import './reset';
+
+body {
+  background-color: $main-color;
+}
+>>>>>>> 99f3d6400c6aeace2a6cf3aa255e597969e31b97

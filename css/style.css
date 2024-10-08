@@ -1,11 +1,62 @@
+<<<<<<< HEAD
 * {
+=======
+*,
+*::after,
+*::before {
+>>>>>>> 99f3d6400c6aeace2a6cf3aa255e597969e31b97
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+<<<<<<< HEAD
 body {
   font-family: sans-serif;
   font-size: 20px;
   background-color: #333;
+=======
+html,
+body {
+  height: 100%;
+  background-color: RED;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #030406;
+>>>>>>> 99f3d6400c6aeace2a6cf3aa255e597969e31b97
 }/*# sourceMappingURL=style.css.map */
