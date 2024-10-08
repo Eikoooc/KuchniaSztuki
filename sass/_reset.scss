@@ -9,41 +9,40 @@
 
 html,
 body {
-    height: 100%;
-    background-color: RED;
+  height: 100%;
 }
- 
+
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
- 
+
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
- 
+
 img {
-    height: auto;
+  height: auto;
 }
- 
+
 input,
 button,
 textarea,
 select {
-    font-family: inherit;
+  font-family: inherit;
 }
- 
+
 button {
-    border: none;
-    cursor: pointer;
+  border: none;
+  cursor: pointer;
 }
- 
- 
+
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
- 
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
