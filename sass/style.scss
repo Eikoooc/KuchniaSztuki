@@ -85,21 +85,15 @@ body {
 
 .hero-text {
   z-index: 1;
-}
+  p{
+    font-size: 90px;
+    color: $logo-white;
+  }
 
-.hero-text-p {
-  font-size: 90px;
-  color: $logo-white;
-}
-
-.hero-span {
-  font-size: 60px;
-  color: $logo-second;
-}
-
-.taste-text {
-  margin-top: -20px;
-  color: $header-subtitle-color;
+  span{
+    font-size: 60px;
+    color: $logo-second;
+  }
 }
 
 .taste-div {
@@ -107,10 +101,52 @@ body {
   justify-content: end;
 }
 
+.taste-div{
+    p{
+        margin-top: -15px;
+        font-size: 20px;
+        color: $header-subtitle-color;
+    }
+}
+
 .see-div {
   position: absolute;
+  left: 50%;
   bottom: 50px;
   height: 50px;
   width: 100px;
+  transform: translateX(-50%);
   background-color: tomato;
+}
+
+.see-div{
+    a{
+
+    }
+}
+
+@media (max-width: 768px){
+    .hero-text{
+        p{
+            font-size: 50px;
+        }
+
+        span{
+            font-size: 40px;
+        }
+    }
+
+    .taste-div{
+        p{
+            font-size: 20px;
+        }
+    }
+
+    .see-div{
+        position: absolute;
+        // top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
 }
