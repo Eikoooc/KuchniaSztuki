@@ -1,11 +1,21 @@
+<<<<<<< HEAD
+* {
+=======
 *,
 *::after,
 *::before {
+>>>>>>> 99f3d6400c6aeace2a6cf3aa255e597969e31b97
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+<<<<<<< HEAD
+body {
+  font-family: sans-serif;
+  font-size: 20px;
+  background-color: #333;
+=======
 html,
 body {
   height: 100%;
@@ -47,4 +57,5 @@ table {
 
 body {
   background-color: #030406;
+>>>>>>> 99f3d6400c6aeace2a6cf3aa255e597969e31b97
 }/*# sourceMappingURL=style.css.map */
