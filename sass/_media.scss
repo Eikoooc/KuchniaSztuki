@@ -1,0 +1,59 @@
+@media (width <= 768px) {
+    .nav {
+      padding: 0 2em;
+      background-color: royalblue;
+  
+      &__items {
+        display: none;
+      }
+  
+  }
+
+  @media (width <= 992px){
+    .nav{
+      background-color: transparent;
+      &__items {
+        display: none;
+      }
+  
+      &__burger{
+        display: block;
+      }
+    }
+  }
+
+@media (max-width: 768px){
+
+    .hero-text{
+        p{
+            font-size: 50px;
+        }
+
+        span{
+            font-size: 40px;
+        }
+    }
+
+    .taste-div{
+        p{
+            margin-top: -20px;
+            font-size: 20px;
+        }
+    }
+
+    .see-div{
+        position: absolute;
+        left: 50%;
+        height: 50px;
+        width: 150px;
+        transform: translate(-50%, -50%);
+    }
+
+    .see-div{
+        a{
+            font-size: 25px;
+            color: rgba(255, 253, 253, 0.897);
+        }
+    }
+}
+}

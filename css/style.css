@@ -171,6 +171,7 @@ body {
 }
 
 .hero-text {
+  font-family: "Kaushan Script";
   z-index: 1;
 }
 .hero-text p {
@@ -186,24 +187,28 @@ body {
   display: flex;
   justify-content: end;
 }
-
 .taste-div p {
-  margin-top: -15px;
-  font-size: 20px;
+  margin-top: -30px;
+  font-size: 25px;
   color: #FFD700;
 }
 
 .see-div {
+  font-family: "Kaushan Script";
   position: absolute;
   left: 50%;
   bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
-  width: 150px;
+  height: 70px;
+  width: 170px;
   transform: translateX(-50%);
   background: linear-gradient(319deg, rgba(255, 67, 67, 0.2) 0%, rgba(255, 100, 37, 0.2) 37%, rgba(255, 183, 0, 0.2) 110%);
+}
+.see-div a {
+  font-size: 30px;
+  color: white;
 }
 
 @media (width <= 400px) {
@@ -226,6 +231,26 @@ body {
   }
 }
 @media (width <= 768px) {
+  .nav {
+    padding: 0 2em;
+    background-color: royalblue;
+  }
+  .nav__items {
+    display: none;
+  }
+}
+@media (width <= 768px) and (width <= 992px) {
+  .nav {
+    background-color: transparent;
+  }
+  .nav__items {
+    display: none;
+  }
+  .nav__burger {
+    display: block;
+  }
+}
+@media (width <= 768px) and (max-width: 768px) {
   .hero-text p {
     font-size: 50px;
   }
@@ -233,11 +258,18 @@ body {
     font-size: 40px;
   }
   .taste-div p {
+    margin-top: -20px;
     font-size: 20px;
   }
   .see-div {
     position: absolute;
     left: 50%;
+    height: 50px;
+    width: 150px;
     transform: translate(-50%, -50%);
+  }
+  .see-div a {
+    font-size: 25px;
+    color: rgba(255, 253, 253, 0.897);
   }
 }/*# sourceMappingURL=style.css.map */

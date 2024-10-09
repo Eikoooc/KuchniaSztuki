@@ -1,5 +1,6 @@
 @use "./colors" as *;
 @import "./reset";
+@import "./animacje";
 
 body {
   font-family: "ABeeZee", sans-serif;
@@ -14,7 +15,7 @@ body {
   height: 100%;
 }
 
-.section-shadow{
+.section-shadow {
   width: 100%;
   height: 8em;
   background-color: $main-color;
@@ -42,9 +43,9 @@ body {
   &__logo {
     font-size: 4rem;
     font-family: "Kaushan Script", cursive;
-    transition: letter-spacing .3s;
+    transition: letter-spacing 0.3s;
 
-    &:hover{
+    &:hover {
       letter-spacing: 2px;
     }
 
@@ -82,7 +83,9 @@ body {
     height: 5em;
     background-color: transparent;
 
-    &-bars, &-bars::after, &-bars::before{
+    &-bars,
+    &-bars::after,
+    &-bars::before {
       background-color: $white-color;
       width: 100%;
     }
@@ -91,13 +94,11 @@ body {
       position: relative;
       height: 15%;
 
-
       &::after,
       &::before {
         position: absolute;
         content: "";
         height: 100%;
-
       }
 
       &::before {
@@ -144,6 +145,7 @@ body {
 }
 
 .hero-text {
+  font-family: "Kaushan Script";
   z-index: 1;
   p {
     font-size: 90px;
@@ -159,76 +161,61 @@ body {
 .taste-div {
   display: flex;
   justify-content: end;
-}
-
-.taste-div {
   p {
-    margin-top: -15px;
-    font-size: 20px;
+    margin-top: -30px;
+    font-size: 25px;
     color: $header-subtitle-color;
   }
 }
 
 .see-div {
+  font-family: "Kaushan Script";
   position: absolute;
   left: 50%;
   bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
-  width: 150px;
+
+  height: 70px;
+  width: 170px;
   transform: translateX(-50%);
-  background: linear-gradient(319deg, rgba(255, 67, 67, 0.2) 0%, rgba(255, 100, 37, 0.2) 37%, rgba(255, 183, 0, 0.2) 110%);
+  background: linear-gradient(
+    319deg,
+    rgba(255, 67, 67, 0.2) 0%,
+    rgba(255, 100, 37, 0.2) 37%,
+    rgba(255, 183, 0, 0.2) 110%
+  );
+  // opacity: 0.5;
+  a {
+    font-size: 30px;
+    color: white;
+  }
 }
 
-@media (width <= 400px){
-  .nav{
-    &__logo{
+@media (width <= 400px) {
+  .nav {
+    &__logo {
       font-size: 3.5rem;
 
-      &:hover{
+      &:hover {
         letter-spacing: 1px;
       }
     }
   }
 }
 
-@media (width <= 992px){
-  .nav{
+@media (width <= 992px) {
+  .nav {
     background-color: transparent;
     &__items {
       display: none;
     }
 
-    &__burger{
+    &__burger {
       display: block;
     }
   }
 }
 
-@media (width <= 768px) {
-
-  .hero-text {
-    p {
-      font-size: 50px;
-    }
-
-    span {
-      font-size: 40px;
-    }
-  }
-
-  .taste-div {
-    p {
-      font-size: 20px;
-    }
-  }
-
-  .see-div {
-    position: absolute;
-    // top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
+@import "./media";
