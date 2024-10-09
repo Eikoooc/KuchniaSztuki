@@ -15,9 +15,13 @@ body {
 }
 
 .nav {
+  position: sticky;
+  top: 0;
+  padding: 0 2em;
   height: 10em;
-  box-shadow: 0 0 10px black;
-  background-color: red;
+  // box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  background-color: transparent;
+  z-index: 1000;
 
   .wrapper {
     display: flex;
@@ -28,6 +32,12 @@ body {
   &__logo {
     font-size: 4rem;
     font-family: "Kaushan Script", cursive;
+    transition: letter-spacing .3s;
+
+    &:hover{
+      letter-spacing: 2px;
+    }
+
     a {
       color: $logo-white;
     }
@@ -56,32 +66,37 @@ body {
   }
 
   &__burger {
+    display: none;
     position: relative;
     width: 5em;
     height: 5em;
+    background-color: transparent;
+
+    &-bars, &-bars::after, &-bars::before{
+      background-color: $white-color;
+      width: 100%;
+    }
 
     &-bars {
       position: relative;
-      width: 100%;
-      height: 25%;
-      background-color: rgb(255, 0, 128);
+      height: 15%;
+
 
       &::after,
       &::before {
         position: absolute;
         content: "";
-        width: 100%;
         height: 100%;
-        background-color: rgb(83, 10, 85);
+
       }
 
       &::before {
-        top: -150%;
+        top: -200%;
         left: 0;
       }
 
       &::after {
-        bottom: -150%;
+        bottom: -200%;
         right: 0;
       }
     }
@@ -89,6 +104,9 @@ body {
 }
 
 .header {
+  position: absolute;
+  top: 0;
+  width: 100%;
   height: 100vh;
 }
 
@@ -151,15 +169,32 @@ body {
   background-color: tomato;
 }
 
-@media (width <= 768px) {
-  .nav {
-    padding: 0 2em;
-    background-color: royalblue;
+@media (width <= 400px){
+  .nav{
+    &__logo{
+      font-size: 3.5rem;
 
+      &:hover{
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+@media (width <= 992px){
+  .nav{
+    background-color: transparent;
     &__items {
       display: none;
     }
+
+    &__burger{
+      display: block;
+    }
   }
+}
+
+@media (width <= 768px) {
 
   .hero-text {
     p {
