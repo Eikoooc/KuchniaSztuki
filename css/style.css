@@ -58,6 +58,15 @@ body {
   height: 100%;
 }
 
+.section-shadow {
+  width: 100%;
+  height: 8em;
+  background-color: #030406;
+  filter: blur(15px);
+  position: absolute;
+  bottom: -5%;
+}
+
 .nav {
   position: sticky;
   top: 0;
@@ -67,6 +76,7 @@ body {
   z-index: 1000;
 }
 .nav .wrapper {
+  max-width: 1600px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -187,10 +197,13 @@ body {
   position: absolute;
   left: 50%;
   bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 50px;
-  width: 100px;
+  width: 150px;
   transform: translateX(-50%);
-  background-color: tomato;
+  background: linear-gradient(319deg, rgba(255, 67, 67, 0.2) 0%, rgba(255, 100, 37, 0.2) 37%, rgba(255, 183, 0, 0.2) 110%);
 }
 
 @media (width <= 400px) {
