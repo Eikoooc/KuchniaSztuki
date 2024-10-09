@@ -148,12 +148,12 @@ body {
   font-family: "Kaushan Script";
   z-index: 1;
   p {
-    font-size: 90px;
+    font-size: 9em;
     color: $logo-white;
   }
 
   span {
-    font-size: 60px;
+    font-size: 0.6em;
     color: $logo-second;
   }
 }
@@ -162,8 +162,10 @@ body {
   display: flex;
   justify-content: end;
   p {
+    position: relative;
+    left: 1em;
     margin-top: -30px;
-    font-size: 25px;
+    font-size: 2.5em;
     color: $header-subtitle-color;
   }
 }
@@ -176,7 +178,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
   height: 70px;
   width: 170px;
   transform: translateX(-50%);
@@ -186,7 +187,7 @@ body {
     rgba(255, 100, 37, 0.2) 37%,
     rgba(255, 183, 0, 0.2) 110%
   );
-  // opacity: 0.5;
+
   a {
     font-size: 30px;
     color: white;
