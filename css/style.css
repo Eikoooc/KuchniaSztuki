@@ -177,7 +177,6 @@ body {
   display: flex;
   justify-content: end;
 }
-
 .taste-div p {
   margin-top: -30px;
   font-size: 25px;
@@ -185,6 +184,7 @@ body {
 }
 
 .see-div {
+  font-family: "Kaushan Script";
   position: absolute;
   left: 50%;
   bottom: 50px;
