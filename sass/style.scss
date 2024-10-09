@@ -1,5 +1,7 @@
 @use "./colors" as *;
 @import "./reset";
+@import "./animacje";
+
 
 body {
   font-family: "ABeeZee", sans-serif;
@@ -54,6 +56,38 @@ body {
       color: $header-subtitle-color;
     }
   }
+
+  &__burger {
+    position: relative;
+    width: 5em;
+    height: 5em;
+
+    &-bars {
+      position: relative;
+      width: 100%;
+      height: 25%;
+      background-color: rgb(255, 0, 128);
+
+      &::after,
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgb(83, 10, 85);
+      }
+
+      &::before {
+        top: -150%;
+        left: 0;
+      }
+
+      &::after {
+        bottom: -150%;
+        right: 0;
+      }
+    }
+  }
 }
 
 .header {
@@ -84,13 +118,14 @@ body {
 }
 
 .hero-text {
+  font-family: 'Kaushan Script';
   z-index: 1;
-  p{
+  p {
     font-size: 90px;
     color: $logo-white;
   }
 
-  span{
+  span {
     font-size: 60px;
     color: $logo-second;
   }
@@ -101,51 +136,38 @@ body {
   justify-content: end;
 }
 
-.taste-div{
-    p{
-        margin-top: -15px;
-        font-size: 20px;
-        color: $header-subtitle-color;
-    }
+.taste-div {
+  p {
+    margin-top: -30px;
+    font-size: 25px;
+    color: $header-subtitle-color;
+  }
 }
 
 .see-div {
   position: absolute;
   left: 50%;
   bottom: 50px;
-  height: 50px;
-  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 170px;
   transform: translateX(-50%);
-  background-color: tomato;
+  background: linear-gradient(319deg, rgba(255, 67, 67, 0.2) 0%, rgba(255, 100, 37, 0.2) 37%, rgba(255, 183, 0, 0.2) 110%);
+  // opacity: 0.5;
 }
 
 .see-div{
-    a{
-
-    }
+  font-family: 'Kaushan Script';
+  a{
+    font-size: 30px;
+    color: white;
+  }
 }
 
-@media (max-width: 768px){
-    .hero-text{
-        p{
-            font-size: 50px;
-        }
 
-        span{
-            font-size: 40px;
-        }
-    }
+@import './media';
 
-    .taste-div{
-        p{
-            font-size: 20px;
-        }
-    }
 
-    .see-div{
-        position: absolute;
-        // top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
+
