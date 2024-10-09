@@ -9,10 +9,20 @@
   
   }
 
+  @media (width <= 992px){
+    .nav{
+      background-color: transparent;
+      &__items {
+        display: none;
+      }
+  
+      &__burger{
+        display: block;
+      }
+    }
+  }
+
 @media (max-width: 768px){
-    .header{
-      height: 90vh;
-    }  
 
     .hero-text{
         p{

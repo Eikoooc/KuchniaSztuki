@@ -59,9 +59,12 @@ body {
 }
 
 .nav {
+  position: sticky;
+  top: 0;
+  padding: 0 2em;
   height: 10em;
-  box-shadow: 0 0 10px black;
-  background-color: red;
+  background-color: transparent;
+  z-index: 1000;
 }
 .nav .wrapper {
   display: flex;
@@ -71,6 +74,10 @@ body {
 .nav__logo {
   font-size: 4rem;
   font-family: "Kaushan Script", cursive;
+  transition: letter-spacing 0.3s;
+}
+.nav__logo:hover {
+  letter-spacing: 2px;
 }
 .nav__logo a {
   color: #F9F9F9;
@@ -95,33 +102,38 @@ body {
   color: #FFD700;
 }
 .nav__burger {
+  display: none;
   position: relative;
   width: 5em;
   height: 5em;
+  background-color: transparent;
+}
+.nav__burger-bars, .nav__burger-bars::after, .nav__burger-bars::before {
+  background-color: #FFF;
+  width: 100%;
 }
 .nav__burger-bars {
   position: relative;
-  width: 100%;
-  height: 25%;
-  background-color: rgb(255, 0, 128);
+  height: 15%;
 }
 .nav__burger-bars::after, .nav__burger-bars::before {
   position: absolute;
   content: "";
-  width: 100%;
   height: 100%;
-  background-color: rgb(83, 10, 85);
 }
 .nav__burger-bars::before {
-  top: -150%;
+  top: -200%;
   left: 0;
 }
 .nav__burger-bars::after {
-  bottom: -150%;
+  bottom: -200%;
   right: 0;
 }
 
 .header {
+  position: absolute;
+  top: 0;
+  width: 100%;
   height: 100vh;
 }
 
@@ -184,15 +196,30 @@ body {
   transform: translateX(-50%);
   background: linear-gradient(319deg, rgba(255, 67, 67, 0.2) 0%, rgba(255, 100, 37, 0.2) 37%, rgba(255, 183, 0, 0.2) 110%);
 }
-
-.see-div {
-  font-family: "Kaushan Script";
-}
 .see-div a {
   font-size: 30px;
   color: white;
 }
 
+@media (width <= 400px) {
+  .nav__logo {
+    font-size: 3.5rem;
+  }
+  .nav__logo:hover {
+    letter-spacing: 1px;
+  }
+}
+@media (width <= 992px) {
+  .nav {
+    background-color: transparent;
+  }
+  .nav__items {
+    display: none;
+  }
+  .nav__burger {
+    display: block;
+  }
+}
 @media (width <= 768px) {
   .nav {
     padding: 0 2em;
@@ -202,10 +229,18 @@ body {
     display: none;
   }
 }
-@media (width <= 768px) and (max-width: 768px) {
-  .header {
-    height: 90vh;
+@media (width <= 768px) and (width <= 992px) {
+  .nav {
+    background-color: transparent;
   }
+  .nav__items {
+    display: none;
+  }
+  .nav__burger {
+    display: block;
+  }
+}
+@media (width <= 768px) and (max-width: 768px) {
   .hero-text p {
     font-size: 50px;
   }
