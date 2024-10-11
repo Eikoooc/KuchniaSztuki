@@ -3,213 +3,278 @@
 @import "./animacje";
 
 body {
-  font-family: "ABeeZee", sans-serif;
-  background-color: $main-color;
-  color: $white-color;
-  height: 100vh;
+	font-family: "ABeeZee", sans-serif;
+	background-color: $main-color;
+	color: $white-color;
+	height: 100vh;
 }
 
 .wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	height: 100%;
 }
 
 .section-shadow {
-  width: 100%;
-  height: 8em;
-  background-color: $main-color;
-  filter: blur(15px);
-  position: absolute;
-  bottom: -5%;
+	width: 100%;
+	height: 8em;
+	background-color: $main-color;
+	filter: blur(15px);
+	position: absolute;
+	bottom: -5%;
 }
 
 .nav {
-  position: sticky;
-  top: 0;
-  padding: 0 2em;
-  height: 10em;
-  // box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-  background-color: transparent;
-  z-index: 1000;
+	position: sticky;
+	top: 0;
+	padding: 0 2em;
+	height: 10em;
+	// box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+	background-color: transparent;
+	z-index: 1000;
 
-  .wrapper {
-    max-width: 1600px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+	.wrapper {
+		max-width: 1600px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-  &__logo {
-    font-size: 4rem;
-    font-family: "Kaushan Script", cursive;
-    transition: letter-spacing 0.3s;
+	&__logo {
+		font-size: 4rem;
+		font-family: "Kaushan Script", cursive;
+		transition: letter-spacing 0.3s;
 
-    &:hover {
-      letter-spacing: 2px;
-    }
+		&:hover {
+			letter-spacing: 2px;
+		}
 
-    a {
-      color: $logo-white;
-    }
-    span {
-      font-size: 2.5rem;
-      color: $logo-second;
-    }
-  }
+		a {
+			color: $logo-white;
+		}
+		span {
+			font-size: 2.5rem;
+			color: $logo-second;
+		}
+	}
 
-  &__items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
+	&__items {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
 
-  &__item {
-    color: $white-color;
-    padding: 1em;
-    font-size: 2.5rem;
-    transition: color 0.3s;
+	&__item {
+		color: $white-color;
+		padding: 1em;
+		font-size: 2.5rem;
+		transition: color 0.3s;
 
-    &:hover {
-      color: $header-subtitle-color;
-    }
-  }
+		&:hover {
+			color: $header-subtitle-color;
+		}
+	}
 
-  &__burger {
-    display: none;
-    position: relative;
-    width: 5em;
-    height: 5em;
-    background-color: transparent;
+	&__burger {
+		display: none;
+		position: relative;
+		width: 5em;
+		height: 5em;
+		background-color: transparent;
 
-    &-bars,
-    &-bars::after,
-    &-bars::before {
-      background-color: $white-color;
-      width: 100%;
-    }
+		&-bars,
+		&-bars::after,
+		&-bars::before {
+			background-color: $white-color;
+			width: 100%;
+		}
 
-    &-bars {
-      position: relative;
-      height: 15%;
+		&-bars {
+			position: relative;
+			height: 15%;
 
-      &::after,
-      &::before {
-        position: absolute;
-        content: "";
-        height: 100%;
-      }
+			&::after,
+			&::before {
+				position: absolute;
+				content: "";
+				height: 100%;
+			}
 
-      &::before {
-        top: -200%;
-        left: 0;
-      }
+			&::before {
+				top: -200%;
+				left: 0;
+			}
 
-      &::after {
-        bottom: -200%;
-        right: 0;
-      }
-    }
-  }
+			&::after {
+				bottom: -200%;
+				right: 0;
+			}
+		}
+	}
 }
 
 .header {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100vh;
+	top: 0;
+	width: 100%;
+	height: 100vh;
 }
 
 .hero-img {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  background-image: url("../img/header.jpg");
-  background-position: center;
-  background-size: cover;
-  z-index: 0;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	background-image: url("../img/header.jpg");
+	background-position: center;
+	background-size: cover;
+	z-index: 0;
 }
 
 .hero-img::after {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: -1;
+	content: " ";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: -1;
 }
 
 .hero-text {
-  font-family: "Kaushan Script";
-  z-index: 1;
-  p {
-    font-size: 9em;
-    color: $logo-white;
-  }
+	font-family: "Kaushan Script";
+	z-index: 1;
+	p {
+		font-size: 9em;
+		color: $logo-white;
+	}
 
-  span {
-    font-size: 0.6em;
-    color: $logo-second;
-  }
+	span {
+		font-size: 0.6em;
+		color: $logo-second;
+	}
 }
 
 .taste-div {
-  display: flex;
-  justify-content: end;
-  p {
-    position: relative;
-    left: 1em;
-    margin-top: -30px;
-    font-size: 2.5em;
-    color: $header-subtitle-color;
-  }
+	display: flex;
+	justify-content: end;
+	p {
+		position: relative;
+		left: 1em;
+		margin-top: -30px;
+		font-size: 2.5em;
+		color: $header-subtitle-color;
+	}
 }
 
 .see-div {
-  font-family: "Kaushan Script";
+	font-family: "Kaushan Script";
+	position: absolute;
+	left: 50%;
+	bottom: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 70px;
+	width: 170px;
+	border-radius: 10px;
+	transform: translateX(-50%);
+
+	background: linear-gradient(
+		319deg,
+		rgba(255, 67, 67, 0.2) 0%,
+		rgba(255, 100, 37, 0.2) 37%,
+		rgba(255, 183, 0, 0.2) 110%
+	);
+
+	cursor: pointer;
+	transition: 0.5s;
+
+	a {
+		font-size: 30px;
+		color: white;
+	}
+}
+
+.see-div:hover {
+	height: 75px;
+	width: 175px;
+	box-shadow: 0 0 10px;
+	opacity: 0.8;
+}
+
+.section1 {
+	display: flex;
+	flex-direction: row;
+	height: 1200px;
+
+	.provisions {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		background-color: gold;
+		border: 3px solid black;
+		background-position: center;
+		background-size: 2000px;
+		overflow: hidden;
+		transition: 1s;
+
+		p {
+			width: 100%;
+			height: 80px;
+			line-height: 80px;
+			font-size: 40px;
+			text-align: center;
+			box-shadow: 0 0 10px black;
+			background-color: rgba(0, 0, 0, 0.5);
+			transition: 0.3s;
+		}
+
+    
+	}
+}
+
+.full{
   position: absolute;
-  left: 50%;
-  bottom: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70px;
-  width: 170px;
-  border-radius: 10px;
-  transform: translateX(-50%);
-
-
-  background: linear-gradient(
-    319deg,
-    rgba(255, 67, 67, 0.2) 0%,
-    rgba(255, 100, 37, 0.2) 37%,
-    rgba(255, 183, 0, 0.2) 110%
-  );
-
-  cursor: pointer;
-  transition: .5s;
-
-  a {
-    font-size: 30px;
-    color: white;
-  }
-}
-
-.see-div:hover{
-  height: 75px;
-  width: 175px;
-  box-shadow: 0 0 10px ;
-  opacity: 0.8;
+  left: 0;
+  height: 1200px;
+  width: 100%;
+  background-color: gold;
+  background-size: cover;
 }
 
 
-@import './media';
+.provisions:hover > p {
+	height: 100px;
+	line-height: 100px;
+}
 
+.provisions:hover {
+	background-size: 2200px;
+}
 
+.snacks {
+	background-image: url("../img/przekaski.jpg");
+}
 
+.breakfasts {
+	background-image: url("../img/pancakes.jpg");
+}
 
+.dinners {
+	background-image: url("../img/curry.jpg");
+}
+
+.supper {
+	background-image: url("../img/kolacja.jpg");
+}
+
+.deserts {
+	background-image: url("../img/cupcakes.jpg");
+}
+
+@import "./media";
