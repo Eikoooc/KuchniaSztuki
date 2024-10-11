@@ -57,9 +57,15 @@
     }
 
     .section1{
-      display: flex;
-      flex-direction: column;
+      display: block;
+
+      .provisions{
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+      }
     }
-    
+
+
   }
 }
