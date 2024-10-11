@@ -6,7 +6,6 @@
   padding: 0;
 }
 
-html,
 body {
   height: 100%;
 }
@@ -49,17 +48,16 @@ body {
   font-family: "ABeeZee", sans-serif;
   background-color: #030406;
   color: #FFF;
-  height: 100vh;
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
   height: 100%;
 }
 
 .section-shadow {
-  width: 100%;
+  width: 200%;
   height: 8em;
   background-color: #030406;
   filter: blur(15px);
@@ -67,11 +65,25 @@ body {
   bottom: -5%;
 }
 
-.nav {
-  position: sticky;
-  top: 0;
+.section-title {
+  text-align: center;
+  padding: 2em;
+  font-size: 5rem;
+  font-family: "Kaushan Script", cursive;
+  font-weight: lighter;
+}
+
+section {
+  overflow: hidden;
   padding: 0 2em;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  padding: 0 4em;
   height: 10em;
+  width: 100%;
   background-color: transparent;
   z-index: 1000;
 }
@@ -141,10 +153,11 @@ body {
 }
 
 .header {
-  position: absolute;
+  position: relative;
   top: 0;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
 .hero-img {
@@ -223,6 +236,68 @@ body {
   opacity: 0.8;
 }
 
+.about-us {
+  background-color: #030406;
+  height: 100vh;
+}
+.about-us .wrapper {
+  display: flex;
+  justify-content: center;
+}
+.about-us__content-box {
+  position: relative;
+  width: 80%;
+  height: 30em;
+}
+.about-us img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3em;
+}
+.about-us__img-first, .about-us__img-second, .about-us__main {
+  position: absolute;
+}
+.about-us__img-first {
+  left: -10%;
+  top: -5em;
+  width: 32%;
+  height: 30em;
+  z-index: 5;
+}
+.about-us__img-second {
+  right: -6em;
+  width: 50%;
+  height: 10em;
+  z-index: 5;
+}
+.about-us__main {
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  right: 0;
+  width: 90%;
+  height: 26em;
+  border-radius: 3em;
+  background-color: #1F0101;
+}
+.about-us__main-title {
+  position: absolute;
+  top: 1.5em;
+  left: 22%;
+  font-size: 3rem;
+}
+.about-us__main-text {
+  position: absolute;
+  bottom: 2.5em;
+  right: 5%;
+  width: 80%;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  font-size: 2.2rem;
+}
+
 @media (width <= 768px) {
   .nav {
     padding: 0 2em;
@@ -231,8 +306,27 @@ body {
   .nav__items {
     display: none;
   }
+  .about-us__main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-us__main-title {
+    position: relative;
+  }
+  .about-us__main-text {
+    position: relative;
+    bottom: 0;
+    right: 0;
+  }
+  .about-us__img-first, .about-us__img-second {
+    display: none;
+  }
 }
-@media (width <= 768px) and (width <= 992px) {
+@media (width <= 992px) {
   .nav {
     background-color: transparent;
   }
@@ -242,8 +336,23 @@ body {
   .nav__burger {
     display: block;
   }
+  .section-title {
+    font-size: 4rem;
+  }
 }
-@media (width <= 768px) and (max-width: 768px) {
+@media (width <= 1100px) {
+  .about-us__main-text {
+    bottom: 3em;
+    font-size: 1.8rem;
+  }
+}
+@media (width <= 1200px) {
+  .about-us__main-title {
+    font-size: 2.7rem;
+    left: 20%;
+  }
+}
+@media (max-width: 768px) {
   .hero-text p {
     font-size: 50px;
   }

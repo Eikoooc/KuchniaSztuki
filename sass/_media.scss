@@ -1,59 +1,110 @@
 @media (width <= 768px) {
-    .nav {
-      padding: 0 2em;
-      background-color: royalblue;
-  
-      &__items {
-        display: none;
-      }
-  
-  }
+  .nav {
+    padding: 0 2em;
+    background-color: royalblue;
 
-  @media (width <= 992px){
-    .nav{
-      background-color: transparent;
-      &__items {
-        display: none;
-      }
-  
-      &__burger{
-        display: block;
-      }
+    &__items {
+      display: none;
     }
   }
 
-@media (max-width: 768px){
+  .about-us {
+    &__main{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-    .hero-text{
-        p{
-            font-size: 50px;
-        }
-
-        span{
-            font-size: 40px;
-        }
+      &-title{
+        position: relative;
+      }
+  
+      &-text{
+        position: relative;
+        bottom: 0;
+        right: 0;
+      }
     }
 
-    .taste-div{
-        p{
-            margin-top: -20px;
-            font-size: 20px;
-        }
+    &__img-first,
+    &__img-second {
+      display: none;
     }
-
-    .see-div{
-        position: absolute;
-        left: 50%;
-        height: 50px;
-        width: 150px;
-        transform: translate(-50%, -50%);
-    }
-
-    .see-div{
-        a{
-            font-size: 25px;
-            color: rgba(255, 253, 253, 0.897);
-        }
-    }
+  }
 }
+
+@media (width <= 992px) {
+  .nav {
+    background-color: transparent;
+    &__items {
+      display: none;
+    }
+
+    &__burger {
+      display: block;
+    }
+  }
+
+  .section-title {
+    font-size: 4rem;
+  }
+}
+
+@media (width <= 1100px){
+  .about-us{
+    &__main{
+      &-text{
+        bottom: 3em;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media (width <= 1200px) {
+
+  .about-us{
+    &__main{
+      &-title{
+        font-size: 2.7rem;
+        left: 20%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text {
+    p {
+      font-size: 50px;
+    }
+
+    span {
+      font-size: 40px;
+    }
+  }
+
+  .taste-div {
+    p {
+      margin-top: -20px;
+      font-size: 20px;
+    }
+  }
+
+  .see-div {
+    position: absolute;
+    left: 50%;
+    height: 50px;
+    width: 150px;
+    transform: translate(-50%, -50%);
+  }
+
+  .see-div {
+    a {
+      font-size: 25px;
+      color: rgba(255, 253, 253, 0.897);
+    }
+  }
 }
