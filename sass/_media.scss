@@ -120,7 +120,15 @@
         line-height: 45px;
       }
     }
+  }
+  .oferts{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    height: 1500px;
 
-
+    .oferts-title{
+      margin-top: 50px;
+    }
   }
 }

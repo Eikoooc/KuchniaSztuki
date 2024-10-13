@@ -372,6 +372,12 @@ section {
   text-align: center;
 }
 
+.ofert-click {
+  margin-top: 80px;
+  font-size: 15px;
+  text-align: center;
+}
+
 .oferts {
   display: flex;
   justify-content: space-evenly;
@@ -384,7 +390,6 @@ section {
   height: 450px;
   width: 320px;
   text-align: center;
-  border: 3px solid grey;
   border-radius: 20px;
   background-position: center;
   background-size: cover;
@@ -396,14 +401,17 @@ section {
   transform: translateY(-50%);
 }
 .oferts .ofblock h3 {
-  margin-top: 30px;
+  position: absolute;
+  top: 50px;
+  left: 50%;
   font-size: 25px;
+  transform: translateX(-50%);
   transition: 1s;
 }
 .oferts .ofblock p {
   position: absolute;
   left: 50%;
-  bottom: 10px;
+  bottom: 50px;
   font-size: 25px;
   text-shadow: 0 0 10px white;
   transform: translateX(-50%);
@@ -414,12 +422,13 @@ section {
   margin-top: 25px;
   padding-left: 25px;
   font-size: 17px;
+  list-style: none;
   transform: translateY(-50%);
   transition: 1s;
   opacity: 0;
 }
 .oferts .ofblock .padding {
-  padding-left: 20px;
+  padding-left: 15px;
 }
 .oferts .ofblock .benefits {
   opacity: 0;
@@ -432,7 +441,9 @@ section {
   left: 0px;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid grey;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: -1;
 }
 
@@ -448,49 +459,79 @@ section {
   transition: 1s;
 }
 
+.hover1:hover {
+  transform: rotateY(180deg);
+}
 .hover1:hover .oferts-items {
   opacity: 1;
+}
+.hover1:hover .ofblock::after {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.hover1:hover .benefits {
+  margin-top: 0px;
+  transform: rotateY(180deg) translateX(50%);
+  opacity: 1;
+}
+.hover1:hover ul {
+  transform: rotateY(180deg) translateY(-50%);
+  margin-left: 45px;
 }
 .hover1:hover h3 {
   opacity: 0;
 }
-.hover1:hover .plan1 {
-  background-image: url(none);
-  background-color: tomato;
-}
-.hover1:hover .benefits {
-  margin-top: 0px;
-  opacity: 1;
+.hover1:hover p {
+  transform: rotateY(180deg) translateX(50%);
 }
 
+.hover2:hover {
+  transform: rotateY(180deg);
+}
 .hover2:hover .oferts-items {
   opacity: 1;
+}
+.hover2:hover .ofblock::after {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.hover2:hover .benefits {
+  margin-top: 0px;
+  transform: rotateY(180deg) translateX(50%);
+  opacity: 1;
+}
+.hover2:hover ul {
+  transform: rotateY(180deg) translateY(-50%);
+  margin-left: 45px;
 }
 .hover2:hover h3 {
   opacity: 0;
 }
-.hover2:hover .plan2 {
-  background-image: url(none);
-  background-color: tomato;
-}
-.hover2:hover .benefits {
-  margin-top: 0px;
-  opacity: 1;
+.hover2:hover p {
+  transform: rotateY(180deg) translateX(50%);
 }
 
+.hover3:hover {
+  transform: rotateY(180deg);
+}
 .hover3:hover .oferts-items {
   opacity: 1;
+}
+.hover3:hover .ofblock::after {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.hover3:hover .benefits {
+  margin-top: 0px;
+  transform: rotateY(180deg) translateX(50%);
+  opacity: 1;
+}
+.hover3:hover ul {
+  transform: rotateY(180deg) translateY(-50%);
+  margin-left: 45px;
 }
 .hover3:hover h3 {
   opacity: 0;
 }
-.hover3:hover .plan3 {
-  background-image: url(none);
-  background-color: tomato;
-}
-.hover3:hover .benefits {
-  margin-top: 0px;
-  opacity: 1;
+.hover3:hover p {
+  transform: rotateY(180deg) translateX(50%);
 }
 
 .plan1 {
@@ -596,5 +637,14 @@ section {
     height: 45px;
     font-size: 30px;
     line-height: 45px;
+  }
+  .oferts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    height: 1500px;
+  }
+  .oferts .oferts-title {
+    margin-top: 50px;
   }
 }/*# sourceMappingURL=style.css.map */
