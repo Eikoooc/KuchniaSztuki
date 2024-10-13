@@ -1,3 +1,15 @@
+@media (width <= 576px){
+  .nav{
+    &__logo{
+      font-size: 3.6rem;
+
+      &:hover{
+        letter-spacing: 0;
+      }
+    }
+  }
+}
+
 @media (width <= 768px) {
   .nav {
     padding: 0 2em;

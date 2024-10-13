@@ -406,7 +406,7 @@ section {
   left: 50%;
   font-size: 25px;
   transform: translateX(-50%);
-  transition: 1s;
+  transition: 0.3s;
 }
 .oferts .ofblock p {
   position: absolute;
@@ -415,7 +415,7 @@ section {
   font-size: 25px;
   text-shadow: 0 0 10px white;
   transform: translateX(-50%);
-  transition: 1s;
+  transition: 0.3s;
 }
 .oferts .ofblock .oferts-items {
   margin-left: 25px;
@@ -424,7 +424,7 @@ section {
   font-size: 17px;
   list-style: none;
   transform: translateY(-50%);
-  transition: 1s;
+  transition: 0.3s;
   opacity: 0;
 }
 .oferts .ofblock .padding {
@@ -549,6 +549,14 @@ section {
   transition: 0.3s;
 }
 
+@media (width <= 576px) {
+  .nav__logo {
+    font-size: 3.6rem;
+  }
+  .nav__logo:hover {
+    letter-spacing: 0;
+  }
+}
 @media (width <= 768px) {
   .nav {
     padding: 0 2em;
