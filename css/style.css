@@ -476,32 +476,48 @@ section {
   z-index: -1;
 }
 
-.hover1, .hover2, .hover3 {
+.hover1,
+.hover2,
+.hover3 {
   transition: 0.7s;
 }
 
-.hover1:hover, .hover2:hover, .hover3:hover {
+.hover1:hover,
+.hover2:hover,
+.hover3:hover {
   transform: rotateY(180deg);
 }
-.hover1:hover .oferts-items, .hover2:hover .oferts-items, .hover3:hover .oferts-items {
+.hover1:hover .oferts-items,
+.hover2:hover .oferts-items,
+.hover3:hover .oferts-items {
   opacity: 1;
 }
-.hover1:hover .ofblock::after, .hover2:hover .ofblock::after, .hover3:hover .ofblock::after {
+.hover1:hover .ofblock::after,
+.hover2:hover .ofblock::after,
+.hover3:hover .ofblock::after {
   background-color: rgba(0, 0, 0, 0.9);
 }
-.hover1:hover .benefits, .hover2:hover .benefits, .hover3:hover .benefits {
+.hover1:hover .benefits,
+.hover2:hover .benefits,
+.hover3:hover .benefits {
   margin-top: 0;
   transform: rotateY(180deg) translateX(50%);
   opacity: 1;
 }
-.hover1:hover ul, .hover2:hover ul, .hover3:hover ul {
+.hover1:hover ul,
+.hover2:hover ul,
+.hover3:hover ul {
   align-self: center;
   transform: rotateY(180deg);
 }
-.hover1:hover h3, .hover2:hover h3, .hover3:hover h3 {
+.hover1:hover h3,
+.hover2:hover h3,
+.hover3:hover h3 {
   opacity: 0;
 }
-.hover1:hover p, .hover2:hover p, .hover3:hover p {
+.hover1:hover p,
+.hover2:hover p,
+.hover3:hover p {
   transform: rotateY(180deg) translateX(50%);
 }
 
@@ -520,6 +536,14 @@ section {
   transition: 0.3s;
 }
 
+@media (width <= 576px) {
+  .nav__logo {
+    font-size: 3.6rem;
+  }
+  .nav__logo:hover {
+    letter-spacing: 0;
+  }
+}
 @media (width <= 768px) {
   .nav {
     padding: 0 2em;
