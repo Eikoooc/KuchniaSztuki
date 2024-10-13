@@ -33,6 +33,21 @@
       display: none;
     }
   }
+
+  .oferts{
+    display: flex;
+    flex-direction: column;
+    // margin-top: 30px;
+    height: 1500px;
+
+    .oferts-title{
+      margin-top: 50px;
+    }
+  
+  }
+  .ofert-click{
+    opacity: 1;
+  }
 }
 
 @media (width <= 992px) {
@@ -108,6 +123,7 @@
   }
   .section1 {
     display: block;
+    height: 1000px;
 
     .provisions {
       height: 200px;
@@ -121,14 +137,7 @@
       }
     }
   }
-  .oferts{
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    height: 1500px;
-
-    .oferts-title{
-      margin-top: 50px;
-    }
-  }
+  
 }
+
+

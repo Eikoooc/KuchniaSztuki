@@ -1,0 +1,24 @@
+@keyframes headerStartLogo {
+    from{
+        transform: translateX(-1000%);
+    }to{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes headerStartTaste {
+    from{
+        transform: translateY(-5000px);
+    }to{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes headerStartButton{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
