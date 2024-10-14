@@ -359,12 +359,15 @@ section {
 }
 
 .section1 {
-  font-family: "Kaushan Script";
+  position: relative;
+  padding: 0 2em;
+  font-family: "Kaushan Script", cursive;
   display: flex;
   flex-direction: row;
   height: 1200px;
 }
 .section1 .provisions {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -376,6 +379,14 @@ section {
   background-size: 2000px;
   transition: 1s;
 }
+.section1 .provisions button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
 .section1 .provisions p {
   width: 100%;
   height: 80px;
@@ -385,6 +396,12 @@ section {
   box-shadow: 0 0 10px black;
   background-color: rgba(0, 0, 0, 0.5);
   transition: 0.3s;
+}
+.section1 .provisions--full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 .provisions:hover > p {

@@ -1,14 +1,16 @@
-const img = document.querySelectorAll('.provisions')
-const btn = document.querySelectorAll('.btn')
+const divs = document.querySelectorAll(".provisions");
 
+function toggleFullSize(event) {
+  const div = event.currentTarget;
 
-function size(){
-    
-    img.forEach(Element =>{
-        Element.classList.toggle('provisions')
-        Element.classList.toggle('full')
-    })
+  if (div.classList.contains("provisions--full")) {
+    div.classList.remove("provisions--full");
+  } else {
+    divs.forEach((d) => d.classList.remove("provisions--full"));
+    div.classList.add("provisions--full");
+  }
 }
 
-btn.addEventListener('click', size)
-
+divs.forEach((div) => {
+  div.addEventListener("click", toggleFullSize);
+});
