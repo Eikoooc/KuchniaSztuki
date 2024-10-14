@@ -690,6 +690,9 @@ section {
   .nav__logo:hover {
     letter-spacing: 0;
   }
+  .header .taste-div p {
+    left: 0.3em;
+  }
   .about-us__main-title {
     font-size: 2rem;
   }
