@@ -3,230 +3,230 @@
 @import "./animacje";
 
 body {
-	font-family: "ABeeZee", sans-serif;
-	background-color: $main-color;
-	color: $white-color;
+  font-family: "ABeeZee", sans-serif;
+  background-color: $main-color;
+  color: $white-color;
 }
 
 .wrapper {
-	max-width: 1440px;
-	margin: 0 auto;
-	height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .section-shadow {
-	width: 200%;
-	height: 8em;
-	background-color: $main-color;
-	filter: blur(15px);
-	position: absolute;
-	bottom: -5%;
+  width: 200%;
+  height: 8em;
+  background-color: $main-color;
+  filter: blur(15px);
+  position: absolute;
+  bottom: -5%;
 }
 
 .section-title {
-	text-align: center;
-	padding: 2em;
-	font-size: 5rem;
-	font-family: "Kaushan Script", cursive;
-	font-weight: lighter;
+  text-align: center;
+  padding: 2em;
+  font-size: 5rem;
+  font-family: "Kaushan Script", cursive;
+  font-weight: lighter;
 }
 
 section {
-	overflow: hidden;
-	padding: 0 2em;
+  overflow: hidden;
+  padding: 0 2em;
 }
 
 .nav {
-	position: fixed;
-	top: 0;
-	padding: 0 4em;
-	height: 10em;
-	width: 100%;
-	// box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-	background-color: transparent;
-	z-index: 1000;
+  position: fixed;
+  top: 0;
+  padding: 0 4em;
+  height: 10em;
+  width: 100%;
+  // box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  background-color: transparent;
+  z-index: 1000;
 
-	.wrapper {
-		max-width: 1600px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
+  .wrapper {
+    max-width: 1600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
 
-	&__logo {
-		font-size: 4rem;
-		font-family: "Kaushan Script", cursive;
-		transition: letter-spacing 0.3s;
+  &__logo {
+    font-size: 4rem;
+    font-family: "Kaushan Script", cursive;
+    transition: letter-spacing 0.3s;
 
-		&:hover {
-			letter-spacing: 2px;
-		}
+    &:hover {
+      letter-spacing: 2px;
+    }
 
-		a {
-			color: $logo-white;
-		}
-		span {
-			font-size: 2.5rem;
-			color: $logo-second;
-		}
-	}
+    a {
+      color: $logo-white;
+    }
+    span {
+      font-size: 2.5rem;
+      color: $logo-second;
+    }
+  }
 
-	&__items {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-	}
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 
-	&__item {
-		color: $white-color;
-		padding: 1em;
-		font-size: 2.5rem;
-		transition: color 0.3s;
+  &__item {
+    color: $white-color;
+    padding: 1em;
+    font-size: 2.5rem;
+    transition: color 0.3s;
 
-		&:hover {
-			color: $header-subtitle-color;
-		}
-	}
+    &:hover {
+      color: $header-subtitle-color;
+    }
+  }
 
-	&__burger {
-		display: none;
-		position: relative;
-		width: 5em;
-		height: 5em;
-		background-color: transparent;
+  &__burger {
+    display: none;
+    position: relative;
+    width: 5em;
+    height: 5em;
+    background-color: transparent;
 
-		&-bars,
-		&-bars::after,
-		&-bars::before {
-			background-color: $white-color;
-			width: 100%;
-		}
+    &-bars,
+    &-bars::after,
+    &-bars::before {
+      background-color: $white-color;
+      width: 100%;
+    }
 
-		&-bars {
-			position: relative;
-			height: 15%;
+    &-bars {
+      position: relative;
+      height: 15%;
 
-			&::after,
-			&::before {
-				position: absolute;
-				content: "";
-				height: 100%;
-			}
+      &::after,
+      &::before {
+        position: absolute;
+        content: "";
+        height: 100%;
+      }
 
-			&::before {
-				top: -200%;
-				left: 0;
-			}
+      &::before {
+        top: -200%;
+        left: 0;
+      }
 
-			&::after {
-				bottom: -200%;
-				right: 0;
-			}
-		}
-	}
+      &::after {
+        bottom: -200%;
+        right: 0;
+      }
+    }
+  }
 }
 
 .header {
-	position: relative;
-	top: 0;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .hero-img {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	background-image: url("../img/header.jpg");
-	background-position: center;
-	background-size: cover;
-	z-index: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: url("../img/header.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
 }
 
 .hero-img::after {
-	content: " ";
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-	z-index: -1;
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
 .hero-text {
-	font-family: "Kaushan Script";
-	z-index: 1;
-	p {
-		transform: translateX(-1000%);
-		animation: headerStartLogo 1s forwards;
-		font-size: 9em;
-		color: $logo-white;
-	}
+  font-family: "Kaushan Script";
+  z-index: 1;
+  p {
+    transform: translateX(-1000%);
+    animation: headerStartLogo 1s forwards;
+    font-size: 9em;
+    color: $logo-white;
+  }
 
-	span {
-		font-size: 0.6em;
-		color: $logo-second;
-	}
+  span {
+    font-size: 0.6em;
+    color: $logo-second;
+  }
 }
 
 .taste-div {
-	display: flex;
-	justify-content: end;
-	transform: translateY(-1000%);
-	animation: headerStartTaste 1.5s forwards;
-	p {
-		position: relative;
-		left: 1em;
-		margin-top: -30px;
-		font-size: 2.5em;
-		color: $header-subtitle-color;
-	}
+  display: flex;
+  justify-content: end;
+  transform: translateY(-1000%);
+  animation: headerStartTaste 1.5s forwards;
+  p {
+    position: relative;
+    left: 1em;
+    margin-top: -30px;
+    font-size: 2.5em;
+    color: $header-subtitle-color;
+  }
 }
 
 .see-div {
-	font-family: "Kaushan Script";
-	position: absolute;
-	left: 50%;
-	bottom: 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 70px;
-	width: 170px;
-	border-radius: 10px;
-	transform: translateX(-50%);
-	opacity: 0;
+  font-family: "Kaushan Script";
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 170px;
+  border-radius: 10px;
+  transform: translateX(-50%);
+  opacity: 0;
 
-	background: linear-gradient(
-		319deg,
-		rgba(255, 67, 67, 0.2) 0%,
-		rgba(255, 100, 37, 0.2) 37%,
-		rgba(255, 183, 0, 0.2) 110%
-	);
+  background: linear-gradient(
+    319deg,
+    rgba(255, 67, 67, 0.2) 0%,
+    rgba(255, 100, 37, 0.2) 37%,
+    rgba(255, 183, 0, 0.2) 110%
+  );
 
-	cursor: pointer;
-	transition: 0.5s;
-	animation-delay: 2s;
-	animation: headerStartButton 3s 1s forwards;
+  cursor: pointer;
+  transition: 0.5s;
+  animation-delay: 2s;
+  animation: headerStartButton 3s 1s forwards;
 
-	a {
-		font-size: 30px;
-		color: white;
-	}
+  a {
+    font-size: 30px;
+    color: white;
+  }
 }
 
 .see-div:hover {
-	height: 75px;
-	width: 175px;
-	box-shadow: 0 0 10px gold;
-	opacity: 0.8;
-	background-color: gold;
-	background-size: cover;
+  height: 75px;
+  width: 175px;
+  box-shadow: 0 0 10px gold;
+  opacity: 0.8;
+  background-color: gold;
+  background-size: cover;
 }
 
 // .full {
@@ -261,76 +261,108 @@ section {
 //          About us
 // =============================
 .about-us {
-	background-color: $main-color;
-	height: 100vh;
+  background-color: $main-color;
+  height: 100vh;
+  margin-bottom: 10em;
 
-	.wrapper {
-		display: flex;
-		justify-content: center;
-	}
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+  }
 
-	&__content-box {
-		position: relative;
-		width: 80%;
-		height: 30em;
-		// padding-bottom: 4em;
-	}
+  &__content-box {
+    position: relative;
+    width: 80%;
+    height: 30em;
+    margin-bottom: 10em;
+  }
 
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		border-radius: 3em;
-	}
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3em;
+  }
 
-	&__img-first,
-	&__img-second,
-	&__main {
-		position: absolute;
-	}
+  &__img-first,
+  &__img-second,
+  &__main {
+    position: absolute;
+  }
 
-	&__img-first {
-		left: -10%;
-		top: -5em;
-		width: 32%;
-		height: 30em;
-		z-index: 5;
-	}
+  &__img-first {
+    left: -10%;
+    top: -5em;
+    width: 32%;
+    height: 30em;
+    z-index: 5;
+  }
 
-	&__img-second {
-		right: -6em;
-		width: 50%;
-		height: 10em;
-		z-index: 5;
-	}
+  &__img-second {
+    right: -6em;
+    width: 50%;
+    height: 10em;
+    z-index: 5;
+  }
 
-	&__main {
-		display: flex;
-		flex-direction: column;
-		bottom: 0;
-		right: 0;
-		width: 90%;
-		height: 26em;
-		border-radius: 3em;
-		background-color: $contrast-color;
+  &__main {
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    right: 0;
+    width: 90%;
+    height: 26em;
+    border-radius: 3em;
+    background-color: $contrast-color;
 
-		&-title {
-			position: absolute;
-			top: 1.5em;
-			left: 22%;
-			font-size: 3rem;
-		}
+    &-title {
+      position: absolute;
+      top: 1.5em;
+      left: 22%;
+      font-size: 3rem;
+    }
 
-		&-text {
-			position: absolute;
-			bottom: 2.5em;
-			right: 5%;
-			width: 80%;
-			color: rgba(255, 255, 255, 0.7);
-			text-align: center;
-			font-size: 2.2rem;
-		}
-	}
+    &-text {
+      position: absolute;
+      bottom: 2.5em;
+      right: 5%;
+      width: 80%;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+      font-size: 2.2rem;
+    }
+  }
+
+  // REVERSE
+
+  .reverse {
+    .about-us {
+      &__img-first {
+        left: 77%;
+      }
+
+      &__img-second {
+        left: -7em;
+      }
+
+      &__main {
+        left: 0;
+
+        &-title {
+		  right: 22%;
+		  left: auto;
+          text-align: right;
+        }
+
+        &-text {
+
+          left: 5%;
+        }
+      }
+    }
+  }
 }
 
 // =============================
@@ -338,71 +370,71 @@ section {
 // =============================
 
 .provisions-h2 {
-	margin-bottom: 20px;
-	font-family: "Kaushan Script";
-	font-size: 5rem;
-	text-align: center;
+  margin-bottom: 20px;
+  font-family: "Kaushan Script";
+  font-size: 5rem;
+  text-align: center;
 }
 
 .section1 {
-	font-family: "Kaushan Script";
-	display: flex;
-	flex-direction: row;
-	height: 1200px;
-	// flex-wrap: wrap;
+  font-family: "Kaushan Script";
+  display: flex;
+  flex-direction: row;
+  height: 1200px;
+  // flex-wrap: wrap;
 
-	.provisions {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-		width: 100%;
-		background-color: gold;
-		border: 3px solid black;
-		background-position: center;
-		background-size: 2000px;
-		transition: 1s;
+  .provisions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: gold;
+    border: 3px solid black;
+    background-position: center;
+    background-size: 2000px;
+    transition: 1s;
 
-		p {
-			width: 100%;
-			height: 80px;
-			line-height: 80px;
-			font-size: 40px;
-			text-align: center;
-			box-shadow: 0 0 10px black;
-			background-color: rgba(0, 0, 0, 0.5);
-			transition: 0.3s;
-		}
-	}
+    p {
+      width: 100%;
+      height: 80px;
+      line-height: 80px;
+      font-size: 40px;
+      text-align: center;
+      box-shadow: 0 0 10px black;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+    }
+  }
 }
 
 .provisions:hover > p {
-	height: 100px;
-	line-height: 100px;
+  height: 100px;
+  line-height: 100px;
 }
 
 .provisions:hover {
-	background-size: 2200px;
+  background-size: 2200px;
 }
 
 .snacks {
-	background-image: url("../img/przekaski.jpg");
+  background-image: url("../img/przekaski.jpg");
 }
 
 .breakfasts {
-	background-image: url("../img/pancakes.jpg");
+  background-image: url("../img/pancakes.jpg");
 }
 
 .dinners {
-	background-image: url("../img/curry.jpg");
+  background-image: url("../img/curry.jpg");
 }
 
 .supper {
-	background-image: url("../img/kolacja.jpg");
+  background-image: url("../img/kolacja.jpg");
 }
 
 .deserts {
-	background-image: url("../img/cupcakes.jpg");
+  background-image: url("../img/cupcakes.jpg");
 }
 
 // ============================= //
@@ -410,139 +442,138 @@ section {
 // =============================
 
 .oferts-title {
-	font-family: "Kaushan Script";
-	margin-top: 80px;
-	font-size: 5rem;
-	text-align: center;
+  font-family: "Kaushan Script";
+  margin-top: 80px;
+  font-size: 5rem;
+  text-align: center;
 }
 
 .ofert-click {
-	margin-top: 30px;
-	font-size: 15px;
-	text-align: center;
-	opacity: 0;
+  margin-top: 30px;
+  font-size: 15px;
+  text-align: center;
+  opacity: 0;
 }
 
 .oferts {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	height: 700px;
-	width: 100%;
-	flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 700px;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .ofblock {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	height: 450px;
-	width: 320px;
-	text-align: center;
-	border-radius: 20px;
-	background-position: center;
-	background-size: cover;
-	z-index: -2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 450px;
+  width: 320px;
+  text-align: center;
+  border-radius: 20px;
+  background-position: center;
+  background-size: cover;
+  z-index: -2;
 
-	h3 {
-		position: absolute;
-		top: 50px;
-		left: 50%;
-		font-size: 25px;
-		transform: translateX(-50%);
-		transition: 0.7s;
-	}
+  h3 {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    font-size: 25px;
+    transform: translateX(-50%);
+    transition: 0.7s;
+  }
 
-	p {
-		position: absolute;
-		left: 50%;
-		bottom: 50px;
-		font-size: 25px;
-		text-shadow: 0 0 10px white;
-		transform: translateX(-50%);
-		transition: 0.7s;
-	}
+  p {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    font-size: 25px;
+    text-shadow: 0 0 10px white;
+    transform: translateX(-50%);
+    transition: 0.7s;
+  }
 
-	ul {
-		list-style: none;
-		padding: 0;
-	}
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 
-	.oferts-items {
-		margin-top: 25px;
-		font-size: 17px;
-		opacity: 0;
-		transition: 0.7s;
-	}
+  .oferts-items {
+    margin-top: 25px;
+    font-size: 17px;
+    opacity: 0;
+    transition: 0.7s;
+  }
 
-	.benefits {
-		opacity: 0;
-		
-	}
+  .benefits {
+    opacity: 0;
+  }
 }
 .ofblock::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border: 2px solid grey;
-	border-radius: 20px;
-	background-color: rgba(0, 0, 0, 0.5);
-	z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid grey;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
 .hover1,
 .hover2,
 .hover3 {
-	transition: 0.7s;
+  transition: 0.7s;
 }
 
 .hover1:hover,
 .hover2:hover,
 .hover3:hover {
-	transform: rotateY(180deg);
+  transform: rotateY(180deg);
 
-	.oferts-items {
-		opacity: 1;
-	}
+  .oferts-items {
+    opacity: 1;
+  }
 
-	.ofblock::after {
-		background-color: rgba(0, 0, 0, 0.9);
-	}
+  .ofblock::after {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
 
-	.benefits {
-		margin-top: 0;
-		transform: rotateY(180deg) translateX(50%);
-		opacity: 1;
-	}
+  .benefits {
+    margin-top: 0;
+    transform: rotateY(180deg) translateX(50%);
+    opacity: 1;
+  }
 
-	ul {
-		align-self: center;
-		transform: rotateY(180deg);
-	}
+  ul {
+    align-self: center;
+    transform: rotateY(180deg);
+  }
 
-	h3 {
-		opacity: 0;
-	}
+  h3 {
+    opacity: 0;
+  }
 
-	p {
-		transform: rotateY(180deg) translateX(50%);
-	}
+  p {
+    transform: rotateY(180deg) translateX(50%);
+  }
 }
 .plan1 {
-	background-image: url("../img/wineFirst.jpg");
-	transition: 0.3s;
+  background-image: url("../img/wineFirst.jpg");
+  transition: 0.3s;
 }
 .plan2 {
-	background-image: url("../img/wineChef.jpg");
-	transition: 0.3;
+  background-image: url("../img/wineChef.jpg");
+  transition: 0.3;
 }
 .plan3 {
-	background-image: url("../img/wineLast.jpg");
-	transition: 0.3s;
+  background-image: url("../img/wineLast.jpg");
+  transition: 0.3s;
 }
 
 @import "./media";
