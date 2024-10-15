@@ -53,9 +53,13 @@ section {
     display: none;
 
     height: 100vh;
-    background-color: $footer-color;
     color: $main-color;
     text-shadow: 0 0 3px $white-color;
+    background-color: $footer-color;
+
+    &-display{
+      display: flex;
+    }
   }
 
   .wrapper {

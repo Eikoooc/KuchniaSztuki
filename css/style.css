@@ -117,9 +117,12 @@ section {
 .nav--mobile {
   display: none;
   height: 100vh;
-  background-color: #0E0303;
   color: #030406;
   text-shadow: 0 0 3px #FFF;
+  background-color: #0E0303;
+}
+.nav--mobile-display {
+  display: flex;
 }
 .nav .wrapper {
   max-width: 1600px;

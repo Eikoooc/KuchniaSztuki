@@ -1,15 +1,21 @@
 const divs = document.querySelectorAll(".provisions");
-const burger = document.querySelector('.nav__burger')
-const navItems = document.querySelectorAll('.nav__item')
-const navMobile = document.querySelector('.nav--mobile')
+const burger = document.querySelector(".nav__burger");
+const navItems = document.querySelectorAll(".nav__item");
+const navMobile = document.querySelector(".nav--mobile");
+const burgerMobile = document.querySelector(".nav__burger--mobile")
 
 const handleNav = () => {
-  navMobile.style.display = 'flex'
-  document.body.classList.add("fixed-position");
+  navMobile.classList.toggle("nav--mobile-display");
+  document.body.classList.toggle('fixed-position');
+  // if (navMobile.classList.contains("nav--mobile-display")) {
+  //   document.body.classList.add("fixed-position");
+  // } else {
+  //   document.body.classList.remove("fixed-position");
+  // }
 
   navItems.forEach((item) => {
     item.addEventListener("click", () => {
-      navMobile.style.display = 'none';
+      navMobile.classList.remove("nav--mobile-display");
       document.body.classList.remove("fixed-position");
     });
   });
@@ -30,4 +36,6 @@ divs.forEach((div) => {
   div.addEventListener("click", toggleFullSize);
 });
 
-burger.addEventListener("click", handleNav);
+[burger, burgerMobile].forEach(btn => {
+  btn.addEventListener('click', handleNav);
+});
