@@ -19,12 +19,25 @@
                 <a href="#">Kuchnia<span>Sztuki</span></a>
             </div>
             <div class="nav__items">
-                <a href="#" class="nav__item">O nas</a>
-                <a href="#" class="nav__item">Przepisy</a>
-                <a href="#" class="nav__item">Oferty</a>
-                <a href="#" class="nav__item">Kontakt</a>
+                <a href="#about" class="nav__item">O nas</a>
+                <a href="#recipes" class="nav__item">Przepisy</a>
+                <a href="#offers" class="nav__item">Oferty</a>
+                <a href="#contact" class="nav__item">Kontakt</a>
             </div>
             <button class="nav__burger">
+                <div class="nav__burger-bars"></div>
+            </button>
+        </div>
+    </nav>
+    <nav class="nav nav--mobile" bgpattern="chequered">
+        <div class="wrapper">
+            <div class="nav__items nav__items--mobile">
+                <a href="#about" class="nav__item">O nas</a>
+                <a href="#recipes" class="nav__item">Przepisy</a>
+                <a href="#offers" class="nav__item">Oferty</a>
+                <a href="#contact" class="nav__item">Kontakt</a>
+            </div>
+            <button class="nav__burger nav__burger--mobile">
                 <div class="nav__burger-bars"></div>
             </button>
         </div>
@@ -39,14 +52,14 @@
                 </div>
             </div>
         </div>
-        <div class="see-div"><a href="#">Zobacz</a></div>
+        <div class="see-div"><a href="#recipes">Zobacz</a></div>
         </div>
         <div class="section-shadow"></div>
     </header>
 
 
     <main>
-        <section class="about-us">
+        <section class="about-us" id="about">
             <h2 class="section-title">O nas</h2>
             <div class="wrapper">
                 <div class="about-us__content-box">
@@ -74,7 +87,7 @@
             </div>
         </section>
 
-        <section class="section1">
+        <section class="section1" id="recipes">
             <div class="provisions snacks">
                 <button class="btn"></button>
                 <p>Przekąski</p>
@@ -98,11 +111,11 @@
         </section>
 
 
-        <h2 class="oferts-title">Oferty</h2>
+        <h2 class="section-title">Oferty</h2>
         <p class="ofert-click">Kliknij w oferte</p>
-        <section class="oferts">
-            <div class="hover1">
-                <div class="ofblock plan1">
+        <section class="oferts" id='offers'>
+            
+                <div class="ofblock test plan1">
                     <h3>Plan Smakosza</h3>
                     <p>50zł</p>
 
@@ -113,37 +126,36 @@
                         <li class="oferts-items">BraK lista alergenów</li>
                         <li class="oferts-items">mało kategorii kulinarnych</li>
                     </ul>
+                </div>
+            
 
-                </div>
-            </div>
-            <div class="hover2">
-                <div class="ofblock plan2">
-                    <h3>Plan Kucharza</h3>
+            
+                <div class="ofblock test plan2">
+                    <h3>Plan Smakosza</h3>
                     <p>50zł</p>
-                        <h3 class="benefits">Cechy</h3>
-                        <ul>
-                            <li class="oferts-items">100 przepisów kulinarnych</li>
-                            <li class="oferts-items">Niektóre filmy z przepisami</li>
-                            <li class="oferts-items">Krótka lista alergenów</li>
-                            <li class="oferts-items">więcej kategorii kulinarne</li>
-                        </ul>
-                </div>
-            </div>
-            <div class="hover3">
-                <div class="ofblock plan3">
-                    <h3>Plan Kuchmistrza</h3>
-                    <p>100zł</p>
 
                     <h3 class="benefits">Cechy</h3>
                     <ul>
-                        <li class="oferts-items">200 przepisów kulinarnych</li>
-                        <li class="oferts-items">Wszytskie filmy z przepisami</li>
-                        <li class="oferts-items">Szczegółowa lista alergenów</li>
-                        <li class="oferts-items">Wszystkie kategorie kulinarne</li>
+                        <li class="oferts-items">50 przepisów kulinarnych</li>
+                        <li class="oferts-items">Brak filmów z przepisami</li>
+                        <li class="oferts-items">BraK lista alergenów</li>
+                        <li class="oferts-items">mało kategorii kulinarnych</li>
                     </ul>
                 </div>
-            </div>
-            </div>
+
+                <div class="ofblock test plan3">
+                    <h3>Plan Smakosza</h3>
+                    <p>50zł</p>
+
+                    <h3 class="benefits">Cechy</h3>
+                    <ul>
+                        <li class="oferts-items">50 przepisów kulinarnych</li>
+                        <li class="oferts-items">Brak filmów z przepisami</li>
+                        <li class="oferts-items">BraK lista alergenów</li>
+                        <li class="oferts-items">mało kategorii kulinarnych</li>
+                    </ul>
+                </div>
+              
         </section>
     </main>
     <script src="./js/main.js"></script>
