@@ -79,6 +79,10 @@ body {
   margin: 0 auto;
 }
 
+.fixed-position {
+  position: fixed;
+}
+
 .section-shadow {
   width: 200%;
   height: 8em;
@@ -110,6 +114,16 @@ section {
   background-color: transparent;
   z-index: 1000;
 }
+.nav--mobile {
+  display: none;
+  height: 100vh;
+  color: #030406;
+  text-shadow: 0 0 3px #FFF;
+  background-color: #0E0303;
+}
+.nav--mobile-display {
+  display: flex;
+}
 .nav .wrapper {
   max-width: 1600px;
   display: flex;
@@ -137,6 +151,12 @@ section {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+.nav__items--mobile {
+  flex-direction: column;
+}
+.nav__items--mobile a {
+  font-size: 4.8rem;
 }
 .nav__item {
   color: #FFF;
@@ -571,6 +591,22 @@ section {
   transition: 0.3s;
 }
 
+@layer bgpattern;
+@layer bgpattern {
+  [bgpattern] {
+    --pattern-size: 8vmin;
+    --pattern-color1: #219194;
+    --pattern-color2: #639B76;
+    --pattern-color3: #79ed52;
+  }
+  [bgpattern=chequered] {
+    --pattern-angle: 0deg;
+    background-color: var(--pattern-color1);
+    background-image: repeating-linear-gradient(calc(90deg - var(--pattern-angle) * -1), transparent 0 calc(var(--pattern-size) / 2), var(--pattern-color3) 0 var(--pattern-size)), repeating-linear-gradient(var(--pattern-angle), transparent 0 calc(var(--pattern-size) / 2), var(--pattern-color2) 0 var(--pattern-size));
+    background-blend-mode: multiply;
+    z-index: 10;
+  }
+}
 @media (width <= 1200px) {
   .about-us__main-title {
     font-size: 2.7rem;
@@ -590,11 +626,22 @@ section {
   .nav {
     background-color: transparent;
   }
+  .nav--mobile {
+    background-color: #0E0303;
+  }
   .nav__items {
     display: none;
   }
+  .nav__items--mobile {
+    display: flex;
+  }
   .nav__burger {
     display: block;
+  }
+  .nav__burger--mobile {
+    position: absolute;
+    right: 4em;
+    top: 3.5em;
   }
   .section-title {
     font-size: 4rem;
@@ -644,6 +691,12 @@ section {
   }
   .nav__items {
     display: none;
+  }
+  .nav__items--mobile {
+    display: flex;
+  }
+  .nav__items--mobile a {
+    font-size: 4rem;
   }
   .about-us__main {
     position: relative;
@@ -716,5 +769,10 @@ section {
   }
   .about-us__main-text {
     font-size: 1.5rem;
+  }
+}
+@media (width >= 992px) {
+  .nav--mobile {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
