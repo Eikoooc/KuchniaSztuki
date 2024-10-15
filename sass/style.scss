@@ -13,6 +13,10 @@ body {
   margin: 0 auto;
 }
 
+.fixed-position{
+  position: fixed;
+}
+
 .section-shadow {
   width: 200%;
   height: 8em;
@@ -45,6 +49,15 @@ section {
   background-color: transparent;
   z-index: 1000;
 
+  &--mobile{
+    display: none;
+
+    height: 100vh;
+    background-color: $footer-color;
+    color: $main-color;
+    text-shadow: 0 0 3px $white-color;
+  }
+
   .wrapper {
     max-width: 1600px;
     display: flex;
@@ -76,6 +89,14 @@ section {
     justify-content: center;
     align-items: center;
     height: 100%;
+
+    &--mobile{
+      flex-direction: column;
+
+      a{
+        font-size: 4.8rem;
+      }
+    }
   }
 
   &__item {
@@ -563,6 +584,34 @@ section {
 .plan3 {
   background-image: url("../img/wineLast.jpg");
   transition: 0.3s;
+}
+
+@layer bgpattern;
+
+@layer bgpattern{
+  [bgpattern]{
+    --pattern-size: 8vmin;
+    --pattern-color1: #219194; 
+    --pattern-color2: #639B76;
+    --pattern-color3: #79ed52;
+  }
+  [bgpattern="chequered"]{
+    --pattern-angle: 0deg;
+    background-color: var(--pattern-color1);
+    background-image: 
+      repeating-linear-gradient(
+        calc(90deg - var(--pattern-angle) * -1),
+        transparent 0 calc(var(--pattern-size) / 2),
+        var(--pattern-color3) 0 var(--pattern-size)
+      ),
+      repeating-linear-gradient(
+        var(--pattern-angle),
+        transparent 0 calc(var(--pattern-size) / 2),
+        var(--pattern-color2) 0 var(--pattern-size)
+      );
+    background-blend-mode: multiply;
+    z-index: 10
+  }
 }
 
 @import "./media";

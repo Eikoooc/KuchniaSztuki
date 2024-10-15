@@ -1,4 +1,19 @@
 const divs = document.querySelectorAll(".provisions");
+const burger = document.querySelector('.nav__burger')
+const navItems = document.querySelectorAll('.nav__item')
+const navMobile = document.querySelector('.nav--mobile')
+
+const handleNav = () => {
+  navMobile.style.display = 'flex'
+  document.body.classList.add("fixed-position");
+
+  navItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      navMobile.style.display = 'none';
+      document.body.classList.remove("fixed-position");
+    });
+  });
+};
 
 function toggleFullSize(event) {
   const div = event.currentTarget;
@@ -14,3 +29,5 @@ function toggleFullSize(event) {
 divs.forEach((div) => {
   div.addEventListener("click", toggleFullSize);
 });
+
+burger.addEventListener("click", handleNav);
