@@ -2,10 +2,18 @@
 @import "./reset";
 @import "./animacje";
 
+
 body {
   font-family: "ABeeZee", sans-serif;
   background-color: $main-color;
   color: $white-color;
+}
+
+.link-a{
+  width: 100%;
+  height: 100%;
+  // background-color: #219194;
+  position: absolute;
 }
 
 .wrapper {
@@ -382,7 +390,7 @@ section {
   // flex-wrap: wrap;
 
   .provisions {
-	position: relative;
+	  position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -391,7 +399,8 @@ section {
     border: 3px solid black;
     background-position: center;
     background-size: 2000px;
-	transition: 1s;
+	  transition: 1s;
+
 
 	button{
 		position: absolute;
@@ -432,7 +441,7 @@ section {
 }
 
 .snacks {
-  background-image: url("../img/przekaski.jpg");
+  background-image: url("../img/drinks-2592848_1920.jpg");
 }
 
 .breakfasts {

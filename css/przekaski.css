@@ -1,0 +1,467 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@keyframes headerStartLogo {
+  from {
+    transform: translateX(-1000%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes headerStartTaste {
+  from {
+    transform: translateY(-5000px);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes headerStartButton {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body {
+  font-family: "ABeeZee", sans-serif;
+  background-color: #030406;
+  color: #FFF;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.fixed-position {
+  position: fixed;
+}
+
+.section-shadow {
+  width: 200%;
+  height: 8em;
+  background-color: #030406;
+  filter: blur(15px);
+  position: absolute;
+  bottom: -5%;
+}
+
+.section-title {
+  text-align: center;
+  padding: 2em;
+  font-size: 5rem;
+  font-family: "Kaushan Script", cursive;
+  font-weight: lighter;
+}
+
+section {
+  overflow: hidden;
+  padding: 0 2em;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  padding: 0 4em;
+  height: 10em;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1000;
+}
+.nav--mobile {
+  display: none;
+  height: 100vh;
+  color: #030406;
+  text-shadow: 0 0 3px #FFF;
+  background-color: #0E0303;
+}
+.nav--mobile-display {
+  display: flex;
+}
+.nav .wrapper {
+  max-width: 1600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.nav__logo {
+  font-size: 4rem;
+  font-family: "Kaushan Script", cursive;
+  transition: letter-spacing 0.3s;
+}
+.nav__logo:hover {
+  letter-spacing: 2px;
+}
+.nav__logo a {
+  color: #F9F9F9;
+}
+.nav__logo span {
+  font-size: 2.5rem;
+  color: #FE9D00;
+}
+.nav__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.nav__items--mobile {
+  flex-direction: column;
+}
+.nav__items--mobile a {
+  font-size: 4.8rem;
+}
+.nav__item {
+  color: #FFF;
+  padding: 1em;
+  font-size: 2.5rem;
+  transition: color 0.3s;
+}
+.nav__item:hover {
+  color: #FFD700;
+}
+.nav__burger {
+  display: none;
+  position: relative;
+  width: 5em;
+  height: 5em;
+  background-color: transparent;
+}
+.nav__burger-bars, .nav__burger-bars::after, .nav__burger-bars::before {
+  background-color: #FFF;
+  width: 100%;
+}
+.nav__burger-bars {
+  position: relative;
+  height: 15%;
+}
+.nav__burger-bars::after, .nav__burger-bars::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+}
+.nav__burger-bars::before {
+  top: -200%;
+  left: 0;
+}
+.nav__burger-bars::after {
+  bottom: -200%;
+  right: 0;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.section1 .text {
+  z-index: 1;
+}
+.section1 .one, .section1 .two {
+  display: flex;
+  height: 330px;
+  width: 100%;
+  font-size: 40px;
+  background-color: blue;
+}
+.section1 .size {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+}
+
+.image {
+  position: relative;
+  background-color: royalblue;
+  background-position: center;
+  background-size: cover;
+}
+
+.image::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.first-image-one {
+  background-image: url("../img/margarita-1839361_1920.jpg");
+}
+
+.section2 {
+  display: flex;
+  justify-content: center;
+}
+.section2 .provisions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 420px;
+}
+
+.snacks {
+  background-color: red;
+}
+
+.breakfasts {
+  background-color: #fff;
+}
+
+.dinners {
+  background-color: pink;
+}
+
+.supper {
+  background-color: violet;
+}
+
+.deserts {
+  background-color: purple;
+}
+
+@media (width <= 1200px) {
+  .about-us__main-title {
+    font-size: 2.7rem;
+    left: 20%;
+  }
+  .about-us .reverse .about-us__main-title {
+    right: 19%;
+  }
+}
+@media (width <= 1100px) {
+  .about-us__main-text {
+    bottom: 3em;
+    font-size: 1.8rem;
+  }
+}
+@media (width <= 992px) {
+  .nav {
+    background-color: transparent;
+  }
+  .nav--mobile {
+    background-color: #0E0303;
+  }
+  .nav__items {
+    display: none;
+  }
+  .nav__items--mobile {
+    display: flex;
+  }
+  .nav__burger {
+    display: block;
+  }
+  .nav__burger--mobile {
+    position: absolute;
+    right: 4em;
+    top: 3.5em;
+  }
+  .section-title {
+    font-size: 4rem;
+  }
+  .ofert-click {
+    margin-top: -20px;
+    opacity: 1;
+  }
+  .ofblock {
+    margin-top: 70px;
+  }
+  .section1 {
+    flex-direction: column;
+  }
+  .section1 .provisions {
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media (width <= 768px) {
+  .hero-text p {
+    font-size: 50px;
+  }
+  .hero-text span {
+    font-size: 40px;
+  }
+  .taste-div p {
+    margin-top: -20px;
+    font-size: 20px;
+  }
+  .see-div {
+    position: absolute;
+    left: 50%;
+    height: 50px;
+    width: 150px;
+    transform: translate(-50%, -50%);
+  }
+  .see-div a {
+    font-size: 25px;
+    color: rgba(255, 253, 253, 0.897);
+  }
+  .section1 {
+    display: block;
+    height: 1000px;
+  }
+  .section1 .provisions {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+  .section1 .provisions p {
+    height: 45px;
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .section1 .provisions--full {
+    height: 100%;
+  }
+  .nav {
+    padding: 0 2em;
+  }
+  .nav__items {
+    display: none;
+  }
+  .nav__items--mobile {
+    display: flex;
+  }
+  .nav__items--mobile a {
+    font-size: 4rem;
+  }
+  .about-us__main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .about-us__main.one, .about-us__main.two {
+    background-size: cover;
+    background-position: center;
+  }
+  .about-us__main.one {
+    background-image: url("../img/kitchen.jpg");
+  }
+  .about-us__main.two {
+    background-image: url("../img/roses.jpg");
+  }
+  .about-us__main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
+    z-index: 1;
+  }
+  .about-us__main-title, .about-us__main-text {
+    position: static;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    z-index: 4;
+  }
+  .about-us__main-title {
+    color: #FE9D00;
+  }
+  .about-us__main-text {
+    color: #FFF;
+  }
+  .about-us__img-first, .about-us__img-second {
+    display: none;
+  }
+  .oferts {
+    display: flex;
+    flex-direction: column;
+  }
+  .oferts ul {
+    top: 70px;
+  }
+  .oferts .oferts-title {
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .oferts .test {
+    width: 280px;
+    height: 350px;
+  }
+  .oferts .ofblock {
+    margin-top: 50px;
+  }
+}
+@media (width <= 576px) {
+  .nav__logo {
+    font-size: 3.6rem;
+  }
+  .nav__logo:hover {
+    letter-spacing: 0;
+  }
+  .header .taste-div p {
+    left: 0.3em;
+  }
+  .about-us__main-title {
+    font-size: 2rem;
+  }
+  .about-us__main-text {
+    font-size: 1.5rem;
+  }
+}
+@media (width >= 992px) {
+  .nav--mobile {
+    display: none;
+  }
+}/*# sourceMappingURL=przekaski.css.map */

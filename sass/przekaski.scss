@@ -1,0 +1,255 @@
+@use "./colors" as *;
+@import "./reset";
+@import "./animacje";
+
+
+body {
+  font-family: "ABeeZee", sans-serif;
+  background-color: $main-color;
+  color: $white-color;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.fixed-position{
+  position: fixed;
+}
+
+.section-shadow {
+  width: 200%;
+  height: 8em;
+  background-color: $main-color;
+  filter: blur(15px);
+  position: absolute;
+  bottom: -5%;
+}
+
+.section-title {
+  text-align: center;
+  padding: 2em;
+  font-size: 5rem;
+  font-family: "Kaushan Script", cursive;
+  font-weight: lighter;
+}
+
+section {
+  overflow: hidden;
+  padding: 0 2em;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  padding: 0 4em;
+  height: 10em;
+  width: 100%;
+  // box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  background-color: transparent;
+  z-index: 1000;
+
+  &--mobile{
+    display: none;
+
+    height: 100vh;
+    color: $main-color;
+    text-shadow: 0 0 3px $white-color;
+    background-color: $footer-color;
+
+    &-display{
+      display: flex;
+    }
+  }
+
+  .wrapper {
+    max-width: 1600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__logo {
+    font-size: 4rem;
+    font-family: "Kaushan Script", cursive;
+    transition: letter-spacing 0.3s;
+
+    &:hover {
+      letter-spacing: 2px;
+    }
+
+    a {
+      color: $logo-white;
+    }
+    span {
+      font-size: 2.5rem;
+      color: $logo-second;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    &--mobile{
+      flex-direction: column;
+
+      a{
+        font-size: 4.8rem;
+      }
+    }
+  }
+
+  &__item {
+    color: $white-color;
+    padding: 1em;
+    font-size: 2.5rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $header-subtitle-color;
+    }
+  }
+
+  &__burger {
+    display: none;
+    position: relative;
+    width: 5em;
+    height: 5em;
+    background-color: transparent;
+
+    &-bars,
+    &-bars::after,
+    &-bars::before {
+      background-color: $white-color;
+      width: 100%;
+    }
+
+    &-bars {
+      position: relative;
+      height: 15%;
+
+      &::after,
+      &::before {
+        position: absolute;
+        content: "";
+        height: 100%;
+      }
+
+      &::before {
+        top: -200%;
+        left: 0;
+      }
+
+      &::after {
+        bottom: -200%;
+        right: 0;
+      }
+    }
+  }
+}
+
+.section1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+
+  .text{
+    z-index: 1;
+  }
+
+  .one, .two{
+    display: flex;
+    height: 330px;
+    width: 100%;
+    font-size: 40px;
+    background-color: blue;
+  }
+
+  .size{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+  }
+}
+
+.image{
+    position: relative;
+    background-color: royalblue;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .image::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+.first-image-one{
+  background-image: url('../img/margarita-1839361_1920.jpg');
+}
+
+
+.section2{
+    display: flex;
+    justify-content: center;
+
+    .provisions{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        height: 420px;
+    }
+}
+
+
+.snacks{
+    background-color: red;
+}
+
+.breakfasts{
+    background-color: #fff;
+}
+
+.dinners{
+    background-color: pink;
+}
+
+.supper{
+    background-color: violet;
+}
+
+.deserts{
+    background-color: purple;
+}
+
+
+
+
+
+
+
+
+
+
+// .image{
+//     width: 500px;
+//     height: 100px;
+//     background-color: #fff;
+// }
+
+@import "./media";
