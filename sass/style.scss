@@ -635,18 +635,20 @@ section {
 
   &__slider {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 370px;
+    height: 50em;
     overflow: hidden;
 
     &-item {
       position: absolute;
-      left: calc(50% - 120px);
-      top: 0;
       padding: 20px;
-      width: 240px;
+      width: 400px;
       height: 360px;
       color: black;
+      text-align: center;
       font-size: 1.6rem;
       background-color: #fff;
       border-radius: 8px;
@@ -662,28 +664,43 @@ section {
     #next,
     #prev {
       position: absolute;
-      left: 7em;
       top: 40%;
-      color: white;
+      color: $logo-second;
       background-color: transparent;
       border: none;
       font-size: 5rem;
+      text-shadow: 0 0 10px black;
       font-family: monospace;
       font-weight: bold;
       z-index: 400;
     }
 
+    #prev{
+      left: 1em;
+    }
+
     #next {
       left: unset;
-      right: 7em;
+      right: 1em;
     }
   }
+}
+
+.tymczasowa{
+  position: relative;
+
+  .section-title{
+    position: relative;
+    top: 2em;
+  }
+  height: 100vh;
 }
 
 // =====================
 //  SVG Transition
 // =====================
 
+// Bottom
 .wave-bottom {
   position: absolute;
   bottom: 0;
@@ -704,6 +721,28 @@ section {
 
 .wave-bottom .shape-fill {
   fill: #1f0101;
+}
+
+// Top
+.wave-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave-top svg {
+  position: relative;
+  display: block;
+  width: calc(125% + 1.3px);
+  height: 126px;
+}
+
+.wave-top .shape-fill {
+  fill: #1F0101;
 }
 
 @import "./media";

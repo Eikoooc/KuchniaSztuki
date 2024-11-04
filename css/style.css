@@ -609,18 +609,20 @@ section {
 }
 .achievements__slider {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 370px;
+  height: 50em;
   overflow: hidden;
 }
 .achievements__slider-item {
   position: absolute;
-  left: calc(50% - 120px);
-  top: 0;
   padding: 20px;
-  width: 240px;
+  width: 400px;
   height: 360px;
   color: black;
+  text-align: center;
   font-size: 1.6rem;
   background-color: #fff;
   border-radius: 8px;
@@ -634,19 +636,31 @@ section {
 .achievements__slider #next,
 .achievements__slider #prev {
   position: absolute;
-  left: 7em;
   top: 40%;
-  color: white;
+  color: #FE9D00;
   background-color: transparent;
   border: none;
   font-size: 5rem;
+  text-shadow: 0 0 10px black;
   font-family: monospace;
   font-weight: bold;
   z-index: 400;
 }
+.achievements__slider #prev {
+  left: 1em;
+}
 .achievements__slider #next {
   left: unset;
-  right: 7em;
+  right: 1em;
+}
+
+.tymczasowa {
+  position: relative;
+  height: 100vh;
+}
+.tymczasowa .section-title {
+  position: relative;
+  top: 2em;
 }
 
 .wave-bottom {
@@ -669,6 +683,27 @@ section {
 
 .wave-bottom .shape-fill {
   fill: #1f0101;
+}
+
+.wave-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave-top svg {
+  position: relative;
+  display: block;
+  width: calc(125% + 1.3px);
+  height: 126px;
+}
+
+.wave-top .shape-fill {
+  fill: #1F0101;
 }
 
 @media (width <= 1200px) {
@@ -857,8 +892,22 @@ section {
     font-size: 1.5rem;
   }
 }
+@media (width <= 478px) {
+  .achievements__slider-item {
+    width: 200px;
+  }
+}
 @media (width >= 992px) {
   .nav--mobile {
     display: none;
+  }
+}
+@media (width >= 1440px) {
+  .achievements #prev {
+    left: 5em;
+  }
+  .achievements #next {
+    left: unset;
+    right: 5em;
   }
 }/*# sourceMappingURL=style.css.map */

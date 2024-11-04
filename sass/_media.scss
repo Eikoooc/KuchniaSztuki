@@ -280,6 +280,17 @@
 }
 
 
+@media (width <= 478px){
+  .achievements{
+    &__slider{
+      &-item{
+
+        width: 200px;
+      }
+    }
+  }
+}
+
 // ===============================
 
 // style powyżej 992px
@@ -287,6 +298,19 @@
   .nav{
     &--mobile{
       display: none;
+    }
+  }
+}
+
+@media (width >= 1440px){
+  .achievements{
+    #prev{
+      left: 5em;
+    }
+
+    #next {
+      left: unset;
+      right: 5em;
     }
   }
 }
