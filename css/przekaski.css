@@ -68,6 +68,10 @@ table {
     opacity: 1;
   }
 }
+html {
+  font-size: 10px;
+}
+
 body {
   font-family: "ABeeZee", sans-serif;
   background-color: #030406;
@@ -133,7 +137,7 @@ section {
 }
 .nav__logo {
   font-size: 4rem;
-  font-family: "Kaushan Script", cursive;
+  font-family: "Kaushan Script";
   transition: letter-spacing 0.3s;
 }
 .nav__logo:hover {
@@ -199,19 +203,25 @@ section {
 .section1 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin-top: 100px;
+  font-family: "Kaushan Script";
 }
-.section1 .text {
+.section1 .image-title {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 70px;
+  width: 100%;
+  line-height: 70px;
   z-index: 1;
 }
-.section1 .one, .section1 .two {
+.section1 .one,
+.section1 .two {
   display: flex;
   height: 330px;
   width: 100%;
   font-size: 40px;
-  background-color: blue;
+  background-color: #1F0101;
 }
 .section1 .size {
   display: flex;
@@ -220,12 +230,23 @@ section {
   width: 25%;
   height: 100%;
 }
+.section1 .size .size-text {
+  font-family: "Montserrat";
+  font-size: 20px;
+  padding: 50px;
+  text-align: center;
+  margin: 20px;
+}
 
 .image {
   position: relative;
-  background-color: royalblue;
   background-position: center;
   background-size: cover;
+}
+.image button {
+  opacity: 0;
+  font-family: "ABeeZee";
+  position: absolute;
 }
 
 .image::after {
@@ -239,7 +260,19 @@ section {
 }
 
 .first-image-one {
-  background-image: url("../img/margarita-1839361_1920.jpg");
+  background-image: url("../img/Napoje/margarita-1839361_1920.jpg");
+}
+
+.second-image-one {
+  background-image: url("../img/Napoje/koktajleComp.jpg");
+}
+
+.first-image-two {
+  background-image: url("../img/Napoje/koktajl_Comp.jpg");
+}
+
+.second-image-two {
+  background-image: url("../img/Napoje/coffee-6600644_1920.jpg");
 }
 
 .section2 {
@@ -247,31 +280,54 @@ section {
   justify-content: center;
 }
 .section2 .provisions {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 25%;
   height: 420px;
+  border-top: 15px solid black;
+  background-position: center;
+  background-size: cover;
+}
+.section2 .btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.section2 p {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 40px;
+  text-align: center;
+  box-shadow: 0 0 10px black;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
 }
 
-.snacks {
-  background-color: red;
+.provisions:hover > p {
+  height: 80px;
+  line-height: 80px;
 }
 
 .breakfasts {
-  background-color: #fff;
+  background-image: url("../img/pancakes.jpg");
 }
 
 .dinners {
-  background-color: pink;
+  background-image: url("../img/curry.jpg");
 }
 
 .supper {
-  background-color: violet;
+  background-image: url("../img/kolacja.jpg");
 }
 
 .deserts {
-  background-color: purple;
+  background-image: url("../img/cupcakes.jpg");
 }
 
 @media (width <= 1200px) {

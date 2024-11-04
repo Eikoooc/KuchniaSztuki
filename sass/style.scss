@@ -387,7 +387,6 @@ section {
   display: flex;
   flex-direction: row;
   height: 1200px;
-  // flex-wrap: wrap;
 
   .provisions {
 	  position: relative;
@@ -482,8 +481,6 @@ section {
   position: relative;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
   flex-wrap: wrap;
 }
 
