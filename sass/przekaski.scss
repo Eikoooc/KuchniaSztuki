@@ -1,0 +1,316 @@
+@use "./colors" as *;
+@import "./reset";
+@import "./animacje";
+
+html {
+	font-size: 10px;
+}
+
+body {
+	// font-family: "Kaushan Script";
+	font-family: "ABeeZee", sans-serif;
+	background-color: $main-color;
+	color: $white-color;
+}
+
+// .kaushan-script-regular {
+//   font-family: "Kaushan Script", cursive;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+.wrapper {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.fixed-position {
+	position: fixed;
+}
+
+.section-shadow {
+	width: 200%;
+	height: 8em;
+	background-color: $main-color;
+	filter: blur(15px);
+	position: absolute;
+	bottom: -5%;
+}
+
+.section-title {
+	text-align: center;
+	padding: 2em;
+	font-size: 5rem;
+	font-family: "Kaushan Script", cursive;
+	font-weight: lighter;
+}
+
+section {
+	overflow: hidden;
+	padding: 0 2em;
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	padding: 0 4em;
+	height: 10em;
+	width: 100%;
+	background-color: transparent;
+	z-index: 1000;
+
+	&--mobile {
+		display: none;
+
+		height: 100vh;
+		color: $main-color;
+		text-shadow: 0 0 3px $white-color;
+		background-color: $footer-color;
+
+		&-display {
+			display: flex;
+		}
+	}
+
+	.wrapper {
+		max-width: 1600px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+
+	&__logo {
+		font-size: 4rem;
+		font-family: "Kaushan Script";
+		transition: letter-spacing 0.3s;
+
+		&:hover {
+			letter-spacing: 2px;
+		}
+
+		a {
+			color: $logo-white;
+		}
+		span {
+			font-size: 2.5rem;
+			color: $logo-second;
+		}
+	}
+
+	&__items {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+
+		&--mobile {
+			flex-direction: column;
+
+			a {
+				font-size: 4.8rem;
+			}
+		}
+	}
+
+	&__item {
+		color: $white-color;
+		padding: 1em;
+		font-size: 2.5rem;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $header-subtitle-color;
+		}
+	}
+
+	&__burger {
+		display: none;
+		position: relative;
+		width: 5em;
+		height: 5em;
+		background-color: transparent;
+
+		&-bars,
+		&-bars::after,
+		&-bars::before {
+			background-color: $white-color;
+			width: 100%;
+		}
+
+		&-bars {
+			position: relative;
+			height: 15%;
+
+			&::after,
+			&::before {
+				position: absolute;
+				content: "";
+				height: 100%;
+			}
+
+			&::before {
+				top: -200%;
+				left: 0;
+			}
+
+			&::after {
+				bottom: -200%;
+				right: 0;
+			}
+		}
+	}
+}
+
+.section1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 100px;
+	font-family: "Kaushan Script";
+
+	.image-title {
+		text-align: center;
+		background-color: rgba(0, 0, 0, 0.5);
+		height: 70px;
+		width: 100%;
+		line-height: 70px;
+		z-index: 1;
+	}
+
+
+	.one,
+	.two {
+		display: flex;
+		height: 330px;
+		width: 100%;
+		font-size: 40px;
+		background-color: $contrast-color;
+	}
+
+	.size {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 25%;
+		height: 100%;
+
+		.size-text {
+			font-family: "Montserrat";
+			font-size: 20px;
+			padding: 50px;
+			text-align: center;
+			margin: 20px;
+		}
+	}
+}
+
+.image {
+	position: relative;
+	background-position: center;
+	background-size: cover;
+
+	button {
+		opacity: 0;
+		font-family: "ABeeZee";
+		position: absolute;
+		// 	margin-bottom: 20px;
+		//   width: 130px;
+		//   height: 45px;
+		//   background-color: transparent;
+		//   color: #fff;
+		//   border: 2px solid white;
+		//   font-size: 18px;
+		// 	align-self: flex-end;
+		//   font-weight: bold;
+		//   text-transform: uppercase;
+		//   z-index: 1;
+		// }
+	}
+}
+
+.image::after {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.first-image-one {
+	background-image: url("../img/Napoje/margarita-1839361_1920.jpg");
+}
+
+.second-image-one {
+	background-image: url("../img/Napoje/koktajleComp.jpg");
+}
+
+.first-image-two {
+	background-image: url("../img/Napoje/koktajl_Comp.jpg");
+}
+
+.second-image-two {
+	background-image: url("../img/Napoje/coffee-6600644_1920.jpg");
+}
+
+.section2 {
+	display: flex;
+	justify-content: center;
+
+	.provisions {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 25%;
+		height: 420px;
+		border-top: 15px solid $provisions-color;
+		background-position: center;
+		background-size: cover;
+	}
+
+	.btn {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+	}
+
+	p {
+		width: 100%;
+		height: 60px;
+		line-height: 60px;
+		font-size: 40px;
+		text-align: center;
+		box-shadow: 0 0 10px black;
+		background-color: rgba(0, 0, 0, 0.5);
+		transition: 0.3s;
+	}
+}
+
+.provisions:hover > p {
+	height: 80px;
+	line-height: 80px;
+}
+
+.breakfasts {
+	background-image: url("../img/pancakes.jpg");
+}
+
+.dinners {
+	background-image: url("../img/curry.jpg");
+}
+
+.supper {
+	background-image: url("../img/kolacja.jpg");
+}
+
+.deserts {
+	background-image: url("../img/cupcakes.jpg");
+}
+
+@import "./media";

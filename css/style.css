@@ -74,6 +74,12 @@ body {
   color: #FFF;
 }
 
+.link-a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
@@ -444,7 +450,7 @@ section {
 }
 
 .snacks {
-  background-image: url("../img/przekaski.jpg");
+  background-image: url("../img/drinks-2592848_1920.jpg");
 }
 
 .breakfasts {
@@ -481,8 +487,6 @@ section {
   position: relative;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
   flex-wrap: wrap;
 }
 
@@ -868,7 +872,7 @@ section {
     transform: translateX(-50%);
   }
   .oferts .test {
-    width: 350px;
+    width: 280px;
     height: 350px;
   }
   .oferts .ofblock {
